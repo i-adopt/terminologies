@@ -9,9 +9,18 @@
   },
   "devDependencies": {
     "@sveltejs/kit": "next",
-    "eslint": "^7.32.0",
+    "eslint": "8.1.0",
     "eslint-plugin-svelte3": "^3.2.1",
-    "svelte": "^3.42.6"
+    "svelte": "^3.42.6",
+    "svelte-simple-datatables": "github:vincjo/svelte-simple-datatables"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "glob": "^7.2.0",
+    "glob-promise": "^4.2.2",
+    "marked": "^3.0.8",
+    "yaml": "^1.10.2"
+  }
 }
