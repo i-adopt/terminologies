@@ -16,22 +16,10 @@ export async function get({ params }) {
     const raw = await Fs.readFile( filePath, 'utf-8' );
     data = Yaml.parse( raw );
 
-    // collect in a dcat file
-    data = `
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dct:  <http://purl.org/dc/terms/> .
-
-<${data.url}> a dcat:Resource ;
-  dct:title  "${data.title}"@en ;
-  ${(data.domain ?? []).map( (kw) => `dcat:keyword "${kw}"@en ;` ).join( '\n' )}
-  ${(data.topic ?? []).map( (kw) => `dcat:keyword "${kw}"@en ;` ).join( '\n' )}
-  dcat:landingPage <${data.url}> .
-`;
-
     return {
       body: data,
       headers: {
-        'Content-Type': 'application/x-turtle',
+        'Content-Type': 'application/json',
       }
     };
 

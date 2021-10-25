@@ -1,6 +1,18 @@
-name: EnvThes
+title: EnvThes
 url: http://vocabs.lter-europe.net/EnvThes/
 domain:
   - earth system science
 type: thesaurus
-language: en
+specificity: broad
+language:
+  - en
+has:
+  unit: false
+  variable: true
+  ooi: true
+  constraint: true
+  matrix: false
+  context: false
+  method: false
+  values: true
+formal: true

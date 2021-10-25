@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 100" x="0px" y="0px">
+  <defs>
+    <style>
+      text {
+        dominant-baseline: central;
+        text-anchor: middle;
+        font-weight: bold;
+      }
+      path {
+        stroke:       black;
+        stroke-width: 5;
+        fill:         transparent;
+        stroke-linejoin: round;
+      }
+      .icon {
+        font-size: 200%;
+      }
+      .text {
+        font-size: 120%;
+      }
+    </style>
+  </defs>
+  <path d="M 20,5 65,5 80,25 80,95 20,95 Z" />
+  <text x="50" y="40" class="icon">{ }</text>
+  <text x="50" y="80" class="text">JSON</text>
+</svg>

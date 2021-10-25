@@ -1,6 +1,5 @@
 <script>
-import { goto } from '$app/navigation';
-
+  import { goto } from '$app/navigation';
   import { onMount } from 'svelte'
   export let data;
   import { Datatable, SearchInput, rows } from 'svelte-simple-datatables'
@@ -21,26 +20,31 @@ import { goto } from '$app/navigation';
   });
 
   function handleClick(){
-    goto( `data/${this.dataset.id}` );
+    goto( `data/${this.parentNode.dataset.id}` );
   }
 </script>
 
-<div style="text-align: right;">
+<div class="search">
   <SearchInput/>
 </div>
-<div id="list">
+<div class="list">
   <Datatable settings={settings} data={data}>
     <thead>
-      <th data-key="name">Name</th>
-      <th data-key="url">Url</th>
-      <th></th>
+      <th data-key="title">Name</th>
+      <th data-key="(row) => row.domain.join()">Domain(s)</th>
+      <th data-key="type">Type</th>
+      <th>Download</th>
     </thead>
     <tbody>
     {#each $rows as row}
-      <tr data-id="{row.id}" on:click={handleClick}>
-        <td>{row.name}</td>
-        <td>{row.url}</td>
-        <td><a href="/data/{row.id}.ttl"><img src="gfx/rdf.svg" alt="dcat"/></a></td>
+      <tr data-id="{row.id}">
+        <td on:click={handleClick}>{row.title}</td>
+        <td on:click={handleClick}>{(row.domain || []).join(', ')}</td>
+        <td on:click={handleClick}>{row.type}</td>
+        <td>
+          <a href="/data/{row.id}.ttl" target="_blank"><img src="gfx/rdf.svg" alt="dcat"/></a>
+          <a href="/data/{row.id}.json" target="_blank"><img src="gfx/json.svg" alt="dcat"/></a>
+        </td>
       </tr>
     {/each}
     </tbody>
@@ -48,12 +52,17 @@ import { goto } from '$app/navigation';
 </div>
 
 <style>
-  #list {
+  .search {
+    margin-bottom: 1em;
+  }
+  .list {
     display:  inline-block;
     height:   95%;
   }
-  td {
+  td, th {
     padding: 0.25em;
+    text-align: center;
+    box-sizing: border-box;
   }
   tr:nth-child(odd) {
     background-color: #eee;
@@ -63,5 +72,9 @@ import { goto } from '$app/navigation';
   }
   tr:hover {
     background-color: steelblue;
+  }
+  img {
+    height: 1.5em;
+    width: 1.5em;
   }
 </style>

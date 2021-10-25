@@ -43,9 +43,11 @@
   }
 
   main {
-    max-width:  1280px;
+    max-width:  800px;
+    width:      80%;
     display:    inline-block;
     flex-grow:  1;
+    text-align: center;
   }
 
   :global( body ), :global(html) {

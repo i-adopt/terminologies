@@ -19,9 +19,9 @@ export async function get() {
     
     result.push({
       id:     file.replace('.yaml', ''),
-      name:   data.name,
-      url:    data.url,
+      title:  data.title,
       domain: data.domain,
+      type:   data.type,
     });
 
   }

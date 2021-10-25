@@ -36,3 +36,10 @@ npm run build
 ```
 
 > You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+
+# Acknowledgements
+
+## Icons
+
+* RDF: https://www.w3.org/2007/10/sw-logos.html
+* languages: https://anandchowdhary.github.io/language-icons/

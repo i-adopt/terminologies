@@ -1,6 +1,27 @@
-name: Scientific Variables Ontology
-url: www.geoscienceontology.org/svo
+title: Scientific Variables Ontology
+url: http://www.geoscienceontology.org/svo
 domain:
   - earth sciences
+topic:
+  - hydrology
+  - physical oceanography
+  - deep earth processes
+  - aquatic chemistry
 type: ontology
-language: en
+specificity: generic
+language:
+  - en
+has:
+  unit: false
+  variable: true
+  ooi: true
+  constraint: true
+  matrix: true
+  context: true
+  method: false
+  values: true
+formal: true
+alignments:
+  - Wikipedia
+  - CF names
+  - SWEET
