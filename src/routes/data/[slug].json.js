@@ -14,7 +14,7 @@ export async function get({ params }) {
     const filePath = Path.join( `data/${params.slug}.yaml` );
     await Fs.access( filePath );
     const raw = await Fs.readFile( filePath, 'utf-8' );
-    data = Yaml.parse( raw );
+    data = Yaml.default.parse( raw );
 
     return {
       body: data,
@@ -27,7 +27,7 @@ export async function get({ params }) {
 
     return {
       status: 404,
-      body: 'Terminology not found!'
+      body: 'Terminology not found!' + e.message
     };
 
   }

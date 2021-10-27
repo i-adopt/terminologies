@@ -1,4 +1,4 @@
-<script>
+<script context="module">
   import MarkDown from '../../components/MarkDown.svelte';
 </script>
 
