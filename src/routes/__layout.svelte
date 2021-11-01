@@ -1,7 +1,11 @@
+<script>
+  import * as Config from './../config';
+  export const Cfg = Config;
+</script>
 <nav>
-  <a href="/">Home</a>
-  <a href="/list">Terminologies</a>
-  <a href="/join">Get Involved</a>
+  <a href="{Cfg.BASE_PATH}/"     >Home</a>
+  <a href="{Cfg.BASE_PATH}/list" >Terminologies</a>
+  <a href="{Cfg.BASE_PATH}/join" >Get Involved</a>
 </nav>
 
 <main>

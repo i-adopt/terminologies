@@ -1,7 +1,9 @@
 <script>
   import { goto } from '$app/navigation';
   import { onMount } from 'svelte'
+  import * as Config from '../../config.js';
   export let data;
+  export const Cfg = Config;
   import { Datatable, SearchInput, rows } from 'svelte-simple-datatables'
 
   const settings = {
@@ -16,10 +18,11 @@
   }
 
   onMount(async () => {
-    data = await (await fetch('/data/summary.json')).json()
+    data = await (await fetch( `${Config.BASE_PATH}/data/summary.json`)).json()
   });
 
   function handleClick(){
+    console.log( `data/${this.parentNode.dataset.id}` )
     goto( `data/${this.parentNode.dataset.id}` );
   }
 </script>
@@ -42,8 +45,8 @@
         <td on:click={handleClick}>{(row.domain || []).join(', ')}</td>
         <td on:click={handleClick}>{row.type}</td>
         <td>
-          <a href="/data/{row.id}.ttl" target="_blank"><img src="gfx/rdf.svg" alt="dcat"/></a>
-          <a href="/data/{row.id}.json" target="_blank"><img src="gfx/json.svg" alt="dcat"/></a>
+          <!-- <a href="{Cfg.BASE_PATH}/data/{row.id}.ttl" target="_blank"><img src="{Cfg.BASE_PATH}/gfx/rdf.svg" alt="dcat"/></a> -->
+          <a href="{Cfg.BASE_PATH}/data/{row.id}.json" target="_blank"><img src="{Cfg.BASE_PATH}/gfx/json.svg" alt="JSON"/></a>
         </td>
       </tr>
     {/each}
