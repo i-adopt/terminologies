@@ -2,7 +2,6 @@ import adapter from '@sveltejs/adapter-static';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import * as Glob from 'glob-promise';
-import * as Config from './src/config.js';
 
 // list of all files to be generated for the data
 const files = Glob.default.sync( '*.yaml', { cwd: 'data'} );
@@ -26,8 +25,7 @@ const config = {
     target: '#svelte',
     adapter: adapter(),
     paths: {
-      base:   Config.BASE_PATH,
-      assets: '',
+      base:   '/terminologies',
     },
     prerender: {
       crawl: true,

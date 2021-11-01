@@ -1,9 +1,9 @@
 <script context="module">
-  import * as Config from '../../config.js';
+  import { base } from '$app/paths';
   export function load({ page }) {
     return {
       props: {
-        promise: fetch(`${Config.BASE_PATH}/data/${page.params.slug}.json`).then( (d) => d.json() ),
+        promise: fetch(`${base}/data/${page.params.slug}.json`).then( (d) => d.json() ),
       }
     };
   }
@@ -36,12 +36,12 @@
           </dd>
           {/if}
 
-        {#if data.topic && (data.topic.length > 0)}
-          <dt>Topic(s)</dt>
+        {#if data.keyword && (data.keyword.length > 0)}
+          <dt>Keyword(s)</dt>
           <dd>
             <ul>
-              {#each data.topic as topic}
-              <li>{topic}</li>
+              {#each data.keyword as kw}
+              <li>{kw}</li>
               {/each}
             </ul>
           </dd>
@@ -59,18 +59,13 @@
         <dt>Concepts contained</dt>
         <dd>
           <div class="stretched">
-            <Status status={data.has.variable} text="Variable" />
-            <Status status={data.has.property} text="Property" />
-            <Status status={data.has.ooi} text="ObjectOfInterest" />
-            <Status status={data.has.context} text="ContextObject" />
-            <Status status={data.has.matrix} text="Matrix" />
+            <Status status={data.has.variable}   text="Variable" />
+            <Status status={data.has.property}   text="Property" />
+            <Status status={data.has.entity}     text="Entity" />
             <Status status={data.has.constraint} text="Constraint" />
-          </div>
-          <hr>
-          <div>
-            <Status status={data.has.unit} text="Unit" />
-            <Status status={data.has.method} text="Method" />
-            <Status status={data.has.values} text="Values" />
+
+            <Status status={data.has.method}     text="Method" />
+            <Status status={data.has.unit}       text="Unit" />
           </div>
         </dd>
 

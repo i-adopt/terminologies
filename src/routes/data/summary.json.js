@@ -22,6 +22,7 @@ export async function get() {
       title:  data.title,
       domain: data.domain,
       type:   data.type,
+      has:    data.has,
     });
 
   }

@@ -1,11 +1,11 @@
 <script>
-  import * as Config from './../config';
-  export const Cfg = Config;
+  import { base } from '$app/paths';
+  export const BASE_PATH = base;
 </script>
 <nav>
-  <a href="{Cfg.BASE_PATH}/"     >Home</a>
-  <a href="{Cfg.BASE_PATH}/list" >Terminologies</a>
-  <a href="{Cfg.BASE_PATH}/join" >Get Involved</a>
+  <a href="{BASE_PATH}/"     >Home</a>
+  <a href="{BASE_PATH}/list" >Terminologies</a>
+  <a href="{BASE_PATH}/join" >Get Involved</a>
 </nav>
 
 <main>
@@ -16,13 +16,13 @@
 
 <style>
   nav {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     /* background-color: #005A9C; */
-    color: white;
-    height: 2em;
-    display: flex;
-    align-items: center;
-    position: relative;
+    color:        white;
+    height:       2em;
+    display:      flex;
+    align-items:  center;
+    position:     relative;
   }
   nav::before {
     content: "";
@@ -50,7 +50,7 @@
     max-width:  800px;
     width:      80%;
     display:    inline-block;
-    flex-grow:  1;
+    height:     calc( 100% - 2.5em );
     text-align: center;
   }
 
