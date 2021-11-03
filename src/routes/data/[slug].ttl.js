@@ -21,7 +21,7 @@ export async function get({ params }) {
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
 
-<${data.url}> a dcat:Resource ;
+<${data.url[0]}> a dcat:Resource ;
 ${(data.domain ?? []).filter( (d) => d.iri ).map( (d) => `  dcat:theme <${d.iri}> ;` ).join( '\n' )}
 ${(data.keywords ?? []).map( (kw) => `  dcat:keyword "${kw}"@en ;` ).join( '\n' )}
 ${(data.url ?? []).map( (url) => `  dcat:landingPage <${url}> ;` ).join( '\n' )}

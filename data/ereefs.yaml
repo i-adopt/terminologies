@@ -3,7 +3,7 @@ url:
   - http://registry.it.csiro.au/def/environment/property
 domain:
   - label: hydrology
-    iri: "http://data.europa.eu/8mn/euroscivoc/a90b6f46-eb48-46d0-81c2-37cf667fd4a "
+    iri: http://data.europa.eu/8mn/euroscivoc/a90b6f46-eb48-46d0-81c2-37cf667fd4a
 keywords:
   - groundwater
   - surface water

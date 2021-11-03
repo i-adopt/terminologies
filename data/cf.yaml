@@ -4,7 +4,7 @@ url:
 domain:
   - label: earth and related environmental sciences
     iri: http://data.europa.eu/8mn/euroscivoc/4a8788fc-4172-461c-ae94-40be4f39043f
-  - label: "climatology "
+  - label: climatology
     iri: http://data.europa.eu/8mn/euroscivoc/caef7888-78d0-473b-b3dc-97d8e9c65073
 keywords:
   - atmospheric physics & chemistry

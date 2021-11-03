@@ -3,8 +3,7 @@ url:
   - http://www.obofoundry.org/ontology/po.html
 domain:
   - label: botany
-    iri: "
-      http://data.europa.eu/8mn/euroscivoc/93205ae1-235c-4259-a94d-ca9453a2ce17"
+    iri: http://data.europa.eu/8mn/euroscivoc/93205ae1-235c-4259-a94d-ca9453a2ce17
 keywords:
   - biological traits
   - phenotypes

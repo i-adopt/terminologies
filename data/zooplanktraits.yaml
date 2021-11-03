@@ -4,8 +4,7 @@ url:
   - http://ecoportal.lifewatchitaly.eu/ontologies/ZOOPLANKTRAITS
 domain:
   - label: marine biology
-    iri: "http://data.europa.eu/8mn/euroscivoc/288627c1-4e51-42b3-b773-f68b39c3b0a9
-      "
+    iri: http://data.europa.eu/8mn/euroscivoc/288627c1-4e51-42b3-b773-f68b39c3b0a9
 keywords:
   - biological traits
   - phenotypes
