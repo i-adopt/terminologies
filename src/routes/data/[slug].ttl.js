@@ -22,16 +22,16 @@ export async function get({ params }) {
 @prefix dct:  <http://purl.org/dc/terms/> .
 
 <${data.url}> a dcat:Resource ;
-  dct:title  "${data.title}"@en ;
-  ${(data.domain ?? []).map( (kw) => `dcat:keyword "${kw}"@en ;` ).join( '\n' )}
-  ${(data.topic ?? []).map( (kw) => `dcat:keyword "${kw}"@en ;` ).join( '\n' )}
-  dcat:landingPage <${data.url}> .
+${(data.domain ?? []).filter( (d) => d.iri ).map( (d) => `  dcat:theme <${d.iri}> ;` ).join( '\n' )}
+${(data.keywords ?? []).map( (kw) => `  dcat:keyword "${kw}"@en ;` ).join( '\n' )}
+${(data.url ?? []).map( (url) => `  dcat:landingPage <${url}> ;` ).join( '\n' )}
+  dct:title  "${data.title}"@en .
 `;
 
     return {
       body: data,
       headers: {
-        'Content-Type': 'application/x-turtle',
+        // 'Content-Type': 'application/x-turtle',
       }
     };
 

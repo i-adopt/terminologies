@@ -12,6 +12,7 @@
   import Status from '../../components/Status.svelte'
 
   export let promise;
+  export const BASE_PATH = base;
 </script>
 
 <div class="container">
@@ -22,25 +23,41 @@
       <h1>{data.title}</h1>
       <hr>
       <dl>
-        <dt>URL</dt>
-        <dd><a href="{data.url}" target="_blank">{data.url}</a></dd>
+
+
+        {#if data.keywords && (data.keywords.length > 0)}
+          <dt>URL(s)</dt>
+          <dd>
+            <ul>
+              {#each data.url as url}
+              <li><a href="{url}" target="_blank">{url}</a></li>
+              {/each}
+            </ul>
+          </dd>
+        {/if}
 
         {#if data.domain && (data.domain.length > 0)}
           <dt>Domain(s)</dt>
           <dd>
             <ul>
               {#each data.domain as domain}
-              <li>{domain}</li>
+              <li>
+                {#if domain.iri}
+                  <a href="{domain.iri}" target="_blank">{domain.label}</a>
+                {:else}
+                  {domain.label}
+                {/if}
+              </li>
               {/each}
             </ul>
           </dd>
-          {/if}
+        {/if}
 
-        {#if data.keyword && (data.keyword.length > 0)}
+        {#if data.keywords && (data.keywords.length > 0)}
           <dt>Keyword(s)</dt>
           <dd>
             <ul>
-              {#each data.keyword as kw}
+              {#each data.keywords as kw}
               <li>{kw}</li>
               {/each}
             </ul>
@@ -49,7 +66,7 @@
 
         <dt>Language(s)</dt>
         <dd>
-          <div class="stretched">
+          <div class="lang">
             {#each data.language as lang}
             <img src="https://unpkg.com/language-icons/icons/{lang}.svg" width="30" alt="{lang}" title="{lang}" />
             {/each}
@@ -59,13 +76,13 @@
         <dt>Concepts contained</dt>
         <dd>
           <div class="stretched">
-            <Status status={data.has.variable}   text="Variable" />
-            <Status status={data.has.property}   text="Property" />
-            <Status status={data.has.entity}     text="Entity" />
-            <Status status={data.has.constraint} text="Constraint" />
+            <Status status={data.has.variable}   link={`${BASE_PATH}/list/variable`}    text="Variable" />
+            <Status status={data.has.property}   link={`${BASE_PATH}/list/property`}    text="Property" />
+            <Status status={data.has.entity}     link={`${BASE_PATH}/list/entity`}      text="Entity" />
+            <Status status={data.has.constraint} link={`${BASE_PATH}/list/constraint`}  text="Constraint" />
 
-            <Status status={data.has.method}     text="Method" />
-            <Status status={data.has.unit}       text="Unit" />
+            <Status status={data.has.method}     link={`${BASE_PATH}/list/method`}      text="Method" />
+            <Status status={data.has.unit}       link={`${BASE_PATH}/list/unit`}        text="Unit" />
           </div>
         </dd>
 
@@ -108,5 +125,8 @@
   .stretched {
     display: flex;
     justify-content: space-between;
+  }
+  .lang img {
+    margin-left: 1em;
   }
 </style>

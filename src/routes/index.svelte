@@ -6,7 +6,9 @@
   export let BASE_PATH = base;
 </script>
 
-<MarkDown source="home" />
+<div class="text">
+  <MarkDown source="home" />
+</div>
 
 <svg xmlns="http://www.w3.org/2000/svg" 
      xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="601px"
@@ -328,5 +330,9 @@
 <style>
   svg {
     margin-top: 2em;
+  }
+  .text {
+    display: inline-block;
+    max-width: 800px;
   }
 </style>

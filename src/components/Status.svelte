@@ -1,6 +1,7 @@
 <script>
   export let status = false;
   export let text = '';
+  export let link = '';
 </script>
 
 <div class="container">
@@ -9,7 +10,11 @@
   {:else}
     <span class="cross">&cross;</span>
   {/if}
-  {text}
+  {#if link}
+    <a href="{link}">{text}</a>
+  {:else}
+    {text}
+  {/if}
 </div>
 
 <style>

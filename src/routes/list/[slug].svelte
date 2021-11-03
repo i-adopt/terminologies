@@ -4,7 +4,8 @@
 
     // get data
     let data = fetch( `${base}/data/summary.json`)
-      .then( (d) => d.json() );
+      .then( (d) => d.json() )
+      .then( (d) => d.sort( (a,b) => a.title.localeCompare( b.title ) ) );
 
     // possibly filter the data
     if( [ 'variable', 'property', 'entity', 'constraint', 'method', 'unit' ].includes( page.params.slug )) {
@@ -56,16 +57,16 @@
         <th data-key="title">Name</th>
         <th data-key="(row) => row.domain.join()">Domain(s)</th>
         <th data-key="type">Type</th>
-        <th>Download</th>
+        <th>&nbsp;</th>
       </thead>
       <tbody>
       {#each $rows as row}
         <tr data-id="{row.id}">
           <td on:click={handleClick}>{row.title}</td>
-          <td on:click={handleClick}>{(row.domain || []).join(', ')}</td>
+          <td on:click={handleClick}>{(row.domain || []).map( (d) => d.label ).join('; ')}</td>
           <td on:click={handleClick}>{row.type}</td>
-          <td>
-            <!-- <a href="{Cfg.BASE_PATH}/data/{row.id}.ttl" target="_blank"><img src="{Cfg.BASE_PATH}/gfx/rdf.svg" alt="dcat"/></a> -->
+          <td class="download">
+            <a href="{BASE_PATH}/data/{row.id}.ttl" target="_blank"><img src="{BASE_PATH}/gfx/rdf.svg" alt="dcat"/></a>
             <a href="{BASE_PATH}/data/{row.id}.json" target="_blank"><img src="{ASSET_PATH}/gfx/json.svg" alt="JSON"/></a>
           </td>
         </tr>
@@ -83,7 +84,7 @@
   }
   .list {
     display:  inline-block;
-    height:   95%;
+    height:   calc(100% - 10em);
   }
   td, th {
     padding: 0.25em;
@@ -102,5 +103,8 @@
   img {
     height: 1.5em;
     width: 1.5em;
+  }
+  .download {
+    white-space: nowrap;
   }
 </style>

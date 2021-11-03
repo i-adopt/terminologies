@@ -47,10 +47,10 @@
   }
 
   main {
-    max-width:  800px;
+    max-width:  1024px;
     width:      80%;
     display:    inline-block;
-    height:     calc( 100% - 2.5em );
+    height:     calc( 100% - 3em );
     text-align: center;
   }
 
