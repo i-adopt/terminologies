@@ -7,14 +7,16 @@ When adding/editing, please adhere to the following schema and store a file with
 
 ```yaml
 title: Some Example Terminology
-url: http://example.org
+url:
+  - http://example.org
+verified: true
 domain:
-  - main domain
+  - label: biological sciences
+    iri: http://data.europa.eu/8mn/euroscivoc/803cff73-504b-41ae-9873-1836c76c15d1
 topic:
   - topic A
   - topic B
 type: ontology
-specificity: generic
 language:
   - en
 has:
@@ -39,6 +41,7 @@ alignments:
 |----------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | title          | yes        | a label to be shown                                                                                                                                                                                             |
 | url            | yes        | a list of URLs                                                                                                                                                                                                  |
+| verified       | yes        | has this terminology been verified by I-Adopt?                                                                                                                                                                                          |
 | domain         | no         | a list of domains according to https://op.europa.eu/en/web/eu-vocabularies/euroscivoc                                                                                                                           |
 | domain.label   |            | label of the domain                                                                                                                                                                                             |
 | domain.iri     |            | IRI for the domain's concept                                                                                                                                                                                    |
