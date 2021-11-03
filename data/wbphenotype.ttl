@@ -3,7 +3,7 @@
 @prefix dct:  <http://purl.org/dc/terms/> .
 
 <http://www.obofoundry.org/ontology/wbphenotype.html> a dcat:Resource ;
-  dcat:theme < http://data.europa.eu/8mn/euroscivoc/803cff73-504b-41ae-9873-1836c76c15d1> ;
+  dcat:theme <http://data.europa.eu/8mn/euroscivoc/803cff73-504b-41ae-9873-1836c76c15d1> ;
   dcat:keyword "biological traits"@en ;
   dcat:keyword "phenotypes"@en ;
   dcat:landingPage <http://www.obofoundry.org/ontology/wbphenotype.html> ;
