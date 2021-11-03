@@ -1,0 +1,9 @@
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+<https://github.com/NCEAS/oboe> a dcat:Resource ;
+
+  dcat:keyword "ontology model framework"@en ;
+  dcat:landingPage <https://github.com/NCEAS/oboe> ;
+  dct:title  "The Extensible Observation Ontology"@en .

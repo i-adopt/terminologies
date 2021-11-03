@@ -1,0 +1,9 @@
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+<https://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty/view> a dcat:Resource ;
+  dcat:theme <http://data.europa.eu/8mn/euroscivoc/4a8788fc-4172-461c-ae94-40be4f39043f> ;
+  dcat:keyword "environmental chemistry"@en ;
+  dcat:landingPage <https://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty/view> ;
+  dct:title  "WISE - Water Information System for Europe"@en .

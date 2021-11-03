@@ -1,0 +1,14 @@
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+<http://bioportal.bioontology.org/ontologies/ECSO> a dcat:Resource ;
+  dcat:theme <http://data.europa.eu/8mn/euroscivoc/4a8788fc-4172-461c-ae94-40be4f39043f> ;
+  dcat:keyword "atmospheric physics & chemistry"@en ;
+  dcat:keyword "ocean physics & chemistry"@en ;
+  dcat:keyword "land ice"@en ;
+  dcat:keyword "sea ice"@en ;
+  dcat:keyword "soil properties"@en ;
+  dcat:keyword "vegetation"@en ;
+  dcat:landingPage <http://bioportal.bioontology.org/ontologies/ECSO> ;
+  dct:title  "The Ecosystem Ontology"@en .
