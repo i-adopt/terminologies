@@ -2,4 +2,4 @@
 
 Found a mistake? Your terminology missing?
 
-Head over to github and add it!
+Head over to <a href="https://github.com/i-adopt/terminologies">github</a> and add it!
