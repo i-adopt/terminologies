@@ -32,7 +32,7 @@ jobs:
           version: 6.20.1
           run_install: true
 
-      - run: pnpm ci
+      - run: pnpm i
       - run: pnpm run build
 
       - name: Deploy
