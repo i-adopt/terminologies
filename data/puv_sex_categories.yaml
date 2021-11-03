@@ -1,0 +1,21 @@
+title: BODC parameter semantic model biological entity sex category terms
+url:
+  - http://vocab.nerc.ac.uk/collection/S10/current/
+domain:
+  - label: marine biology
+    iri: http://data.europa.eu/8mn/euroscivoc/288627c1-4e51-42b3-b773-f68b39c3b0a9
+keywords:
+  - sex categories
+type: SKOS
+language:
+  - en
+has:
+  variable: false
+  property: true
+  entity: true
+  constraint: false
+  method: false
+  unit: false
+formal: false
+alignments:
+  - none yet

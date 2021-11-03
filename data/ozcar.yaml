@@ -1,19 +1,23 @@
-title: EnvThes
+title: OZCAR thesaurus
 url:
-  - http://vocabs.lter-europe.net/EnvThes/
+  - https://in-situ.theia-land.fr/skosmos/theia_ozcar_thesaurus/en/
 domain:
   - label: earth and related environmental sciences
     iri: http://data.europa.eu/8mn/euroscivoc/4a8788fc-4172-461c-ae94-40be4f39043f
-keywords: null
-type: thesaurus
+keywords:
+  - critical zones
+type: SKOS
 language:
   - en
 has:
   variable: true
   property: true
   entity: true
-  constraint: true
-  method: true
+  constraint: false
+  method: false
   unit: false
-formal: true
-alignments: null
+formal: false
+alignments:
+  - EnvThes
+  - GEMET
+  - AGROVOC

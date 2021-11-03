@@ -1,19 +1,18 @@
-title: EnvThes
+title: US LTER Controlled Vocabulary
 url:
-  - http://vocabs.lter-europe.net/EnvThes/
+  - https://vocab.lternet.edu
 domain:
   - label: earth and related environmental sciences
     iri: http://data.europa.eu/8mn/euroscivoc/4a8788fc-4172-461c-ae94-40be4f39043f
 keywords: null
-type: thesaurus
-language:
-  - en
+type: controlled vocabulary
+language: null
 has:
   variable: true
-  property: true
+  property: false
   entity: true
-  constraint: true
-  method: true
+  constraint: false
+  method: false
   unit: false
 formal: true
 alignments: null

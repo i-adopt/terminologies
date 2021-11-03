@@ -1,0 +1,19 @@
+title: Quantities, Units, Dimensions and dataTypes
+url:
+  - http://www.qudt.org/doc/DOC_VOCAB-UNITS.html
+domain:
+  - label: All
+    iri: null
+keywords:
+  - units
+type: null
+language: null
+has:
+  variable: false
+  property: false
+  entity: false
+  constraint: false
+  method: false
+  unit: true
+formal: false
+alignments: null

@@ -1,0 +1,31 @@
+title: Alien Species Thesaurus
+url:
+  - http://ecoportal.lifewatch.eu/ontologies/ALIENSPECIES
+  - http://thesauri.lifewatchitaly.eu/AlienSpecies
+domain:
+  - label: biological sciences
+    iri: "http://data.europa.eu/8mn/euroscivoc/803cff73-504b-41ae-9873-1836c76c15d1
+      "
+  - label: ecosystems
+    iri: http://data.europa.eu/8mn/euroscivoc/81f1f477-aa96-427a-adf9-7742a429899a
+keywords:
+  - invasive
+  - non-native
+  - animals
+  - plants
+  - habitat
+  - seeds
+  - eggs
+type: thesaurus
+language:
+  - en
+has:
+  variable: false
+  property: false
+  entity: false
+  constraint: false
+  method: false
+  unit: false
+formal: false
+alignments:
+  - yes

@@ -1,0 +1,23 @@
+title: BODC parameter semantic model chemical substances
+url:
+  - http://vocab.nerc.ac.uk/collection/S27/current/
+domain:
+  - label: earth and related environmental sciences
+    iri: http://data.europa.eu/8mn/euroscivoc/4a8788fc-4172-461c-ae94-40be4f39043f
+keywords:
+  - chemical compounds
+type: SKOS
+language:
+  - en
+has:
+  variable: false
+  property: false
+  entity: true
+  constraint: false
+  method: false
+  unit: false
+formal: true
+alignments:
+  - ChEBI
+  - CAS
+  - ICES PARAM

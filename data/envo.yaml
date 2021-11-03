@@ -1,19 +1,18 @@
-title: EnvThes
+title: The Environment Ontology
 url:
-  - http://vocabs.lter-europe.net/EnvThes/
+  - https://github.com/EnvironmentOntology/envo/
 domain:
   - label: earth and related environmental sciences
     iri: http://data.europa.eu/8mn/euroscivoc/4a8788fc-4172-461c-ae94-40be4f39043f
 keywords: null
-type: thesaurus
-language:
-  - en
+type: ontology
+language: null
 has:
   variable: true
-  property: true
+  property: false
   entity: true
-  constraint: true
-  method: true
+  constraint: false
+  method: false
   unit: false
 formal: true
 alignments: null

@@ -1,0 +1,21 @@
+title: Macroalgae Traits Thesaurus
+url:
+  - http://ecoportal.lifewatch.eu/ontologies/MACROALGAETRAITS
+  - http://thesauri.lifewatchitaly.eu/Macroalgae/index.php
+domain:
+  - label: phycology
+    iri: http://data.europa.eu/8mn/euroscivoc/248e39b2-ff43-455f-8b47-514afe14b595
+keywords:
+  - biological traits
+  - phenotypes
+type: null
+language: null
+has:
+  variable: true
+  property: true
+  entity: false
+  constraint: true
+  method: false
+  unit: false
+formal: false
+alignments: null

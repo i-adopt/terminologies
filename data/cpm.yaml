@@ -1,0 +1,19 @@
+title: Complex Properties Model - as related to ocean measurements
+url: null
+domain:
+  - label: All
+    iri: null
+keywords:
+  - ontology model framework
+type: ontology
+language:
+  - en
+has:
+  variable: false
+  property: false
+  entity: false
+  constraint: false
+  method: false
+  unit: false
+formal: true
+alignments: null

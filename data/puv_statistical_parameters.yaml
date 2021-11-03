@@ -1,19 +1,20 @@
-title: EnvThes
+title: BODC parameter semantic model parameter statistic
 url:
-  - http://vocabs.lter-europe.net/EnvThes/
+  - http://vocab.nerc.ac.uk/collection/S07/current/
 domain:
   - label: earth and related environmental sciences
     iri: http://data.europa.eu/8mn/euroscivoc/4a8788fc-4172-461c-ae94-40be4f39043f
-keywords: null
-type: thesaurus
+keywords:
+  - statistical terms
+type: SKOS
 language:
   - en
 has:
-  variable: true
+  variable: false
   property: true
-  entity: true
-  constraint: true
+  entity: false
+  constraint: false
   method: true
   unit: false
-formal: true
+formal: false
 alignments: null

@@ -1,0 +1,24 @@
+title: Zooplankton Traits Thesaurus
+url:
+  - http://ecoportal.lifewatchitaly.eu/ontologies/ZOOPLANKTRAITS
+  - http://thesauri.lifewatchitaly.eu/zooplanktonTraits/index.php
+domain:
+  - label: marine biology
+    iri: "http://data.europa.eu/8mn/euroscivoc/288627c1-4e51-42b3-b773-f68b39c3b0a9
+      "
+keywords:
+  - biological traits
+  - phenotypes
+type: null
+language:
+  - en
+has:
+  variable: false
+  property: true
+  entity: false
+  constraint: false
+  method: false
+  unit: false
+formal: false
+alignments:
+  - no

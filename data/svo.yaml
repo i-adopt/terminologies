@@ -1,24 +1,28 @@
 title: Scientific Variables Ontology
-url: http://www.geoscienceontology.org/svo
+url:
+  - https://scientificvariablesontology.org/svo/
 domain:
-  - earth sciences
-keyword:
+  - label: earth and related environmental sciences
+    iri: http://data.europa.eu/8mn/euroscivoc/4a8788fc-4172-461c-ae94-40be4f39043f
+keywords:
   - hydrology
   - physical oceanography
   - deep earth processes
   - aquatic chemistry
+  - others
 type: ontology
 language:
   - en
 has:
-  variable:   true
-  property:   true
-  entity:     true
+  variable: true
+  property: true
+  entity: true
   constraint: true
-  method:     false
-  unit:       false
+  method: false
+  unit: false
 formal: true
 alignments:
-  - Wikipedia
-  - CF names
-  - SWEET
+  - points to Wikipedia (and thus indirectly connected to other Wikimedia
+    resources)
+  - mappings for CF names
+  - SWEET available
