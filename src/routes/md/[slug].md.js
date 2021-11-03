@@ -1,5 +1,6 @@
 import { promises as Fs } from 'fs';
 import Path from 'path';
+import marked from 'marked';
 
 /**
  * @type {import('@sveltejs/kit').RequestHandler}
@@ -19,7 +20,7 @@ export async function get({ params }) {
   }
 
   return {
-    body: data,
+    body: marked( data ),
   };
 
 }
