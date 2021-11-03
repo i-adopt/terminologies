@@ -3,8 +3,8 @@ url:
   - http://www.obofoundry.org/ontology/emapa.html
 domain:
   - label: biological sciences
-      http://data.europa.eu/8mn/euroscivoc/803cff73-504b-41ae-9873-1836c76c15d1
-    iri: null
+    iri: "
+      http://data.europa.eu/8mn/euroscivoc/803cff73-504b-41ae-9873-1836c76c15d1"
 keywords:
   - biological traits
   - phenotypes

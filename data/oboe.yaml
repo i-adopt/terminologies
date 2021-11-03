@@ -2,7 +2,7 @@ title: The Extensible Observation Ontology
 url:
   - https://github.com/NCEAS/oboe
 domain:
-  - label: All
+  - label: all
     iri: null
 keywords:
   - ontology model framework

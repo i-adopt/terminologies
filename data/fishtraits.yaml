@@ -1,7 +1,7 @@
 title: Fish Traits Thesaurus
 url:
-  - http://ecoportal.lifewatch.eu/ontologies/FISHTRAITS
   - http://thesauri.lifewatchitaly.eu/fishTraits/index.php
+  - http://ecoportal.lifewatch.eu/ontologies/FISHTRAITS
 domain:
   - label: "fisheries "
     iri: "http://data.europa.eu/8mn/euroscivoc/0b94b07d-b3bc-4b89-9d2a-5815d4fadb83
@@ -9,7 +9,7 @@ domain:
 keywords:
   - biological traits
   - phenotypes
-type: skos
+type: SKOS
 language:
   - en
 has:

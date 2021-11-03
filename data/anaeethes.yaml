@@ -1,7 +1,7 @@
 title: anaeethes
 url:
-  - http://agroportal.lirmm.fr/ontologies/ANAEETHES
   - https://vocabulaires-ouverts.inrae.fr/2017/03/13/thesaurus-anaee/
+  - http://agroportal.lirmm.fr/ontologies/ANAEETHES
 domain:
   - label: agricultural sciences
     iri: http://data.europa.eu/8mn/euroscivoc/9b9abbee-82f5-4766-bd4d-feb73cf06573
@@ -11,7 +11,7 @@ keywords:
   - radiations
   - terrestrial ecosystem
   - experimental
-type: skos
+type: SKOS
 language:
   - en
   - fr

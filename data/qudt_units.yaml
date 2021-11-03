@@ -2,7 +2,7 @@ title: Quantities, Units, Dimensions and dataTypes
 url:
   - http://www.qudt.org/doc/DOC_VOCAB-UNITS.html
 domain:
-  - label: All
+  - label: all
     iri: null
 keywords:
   - units

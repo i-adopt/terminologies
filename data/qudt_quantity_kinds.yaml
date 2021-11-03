@@ -2,7 +2,7 @@ title: Quantities, Units, Dimensions and dataTypes
 url:
   - http://www.qudt.org/doc/2020/07/DOC_VOCAB-QUANTITY-KINDS-ALL-v2.1.html
 domain:
-  - label: All
+  - label: all
     iri: null
 keywords:
   - quantity kinds
