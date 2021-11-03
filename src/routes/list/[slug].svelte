@@ -88,7 +88,7 @@
   }
   td, th {
     padding: 0.25em;
-    text-align: center;
+    text-align: left !important;
     box-sizing: border-box;
   }
   tr:nth-child(odd) {

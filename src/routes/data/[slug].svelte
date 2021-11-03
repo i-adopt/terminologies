@@ -20,7 +20,7 @@
     {#await promise}
       <p>Loading...</p>
     {:then data}
-      <h1>{data.title}</h1>
+      <h1>{data.title} {#if data.verified}<span class="verified" title="I-Adopt verified">&check;</span>{/if}</h1>
       <hr>
       <dl>
 
@@ -128,5 +128,8 @@
   }
   .lang img {
     margin-left: 1em;
+  }
+  .verified {
+    cursor: help;
   }
 </style>
