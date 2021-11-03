@@ -19,16 +19,21 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Cache dependencies
+      - name: Cache pnpm modules
         uses: actions/cache@v2
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-
 
-      - run: npm ci
-      - run: npm run build
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.20.1
+          run_install: true
+
+      - run: pnpm ci
+      - run: pnpm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
