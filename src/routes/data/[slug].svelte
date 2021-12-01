@@ -9,7 +9,7 @@
   }
 </script>
 <script>
-  import Status from '../../components/Status.svelte'
+  import Status from '../../components/Status.svelte';
 
   export let promise;
   export const BASE_PATH = base;

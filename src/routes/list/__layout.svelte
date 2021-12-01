@@ -9,7 +9,7 @@
 </script>
 <script>
   import { base } from '$app/paths';
-  export const BASE_PATH = base
+  export const BASE_PATH = base;
   export let CURRENT_PAGE;
 </script>
 

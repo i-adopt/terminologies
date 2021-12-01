@@ -3,9 +3,10 @@
   export const BASE_PATH = base;
 </script>
 <nav>
-  <a href="{BASE_PATH}/"     >Home</a>
-  <a href="{BASE_PATH}/list" >Terminologies</a>
-  <a href="{BASE_PATH}/join" >Get Involved</a>
+  <a href="{BASE_PATH}/"              >Home</a>
+  <a href="{BASE_PATH}/list"          >Terminologies</a>
+  <a href="{BASE_PATH}/unit2property" >Unit-to-Property</a>
+  <a href="{BASE_PATH}/join"          >Get Involved</a>
 </nav>
 
 <main>

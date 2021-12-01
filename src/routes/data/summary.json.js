@@ -16,7 +16,7 @@ export async function get() {
   for( const file of files ) {
     const raw = await Fs.readFile( Path.join( 'data', file ), 'utf-8' ),
           data = Yaml.default.parse( raw );
-    
+
     result.push({
       id:     file.replace('.yaml', ''),
       title:  data.title,

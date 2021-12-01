@@ -1,0 +1,1 @@
+{"version":"0.0.1","name":"iadopt-terminologies.github.io","dependencies":{"@eslint/eslintrc":{"version":"1.0.3"},"@types/glob":{"version":"7.2.0"},"@types/minimatch":{"version":"3.0.5"},"eslint-scope":{"version":"6.0.0"},"eslint-utils":{"version":"3.0.0"},"glob-promise":{"version":"4.2.2"},"papaparse":{"version":"5.3.1"},"yaml":{"version":"1.10.2"}}}

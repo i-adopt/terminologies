@@ -4,14 +4,15 @@ specifiers:
   '@rollup/plugin-commonjs': ^21.0.1
   '@rollup/plugin-node-resolve': ^13.0.6
   '@sveltejs/adapter-static': ^1.0.0-next.21
-  '@sveltejs/kit': next
+  '@sveltejs/kit': ^1.0.0-next.192
   eslint: 8.1.0
   eslint-plugin-svelte3: ^3.2.1
   glob: ^7.2.0
   glob-promise: ^4.2.2
   marked: ^3.0.8
+  papaparse: ^5.3.1
   svelte: ^3.42.6
-  svelte-simple-datatables: github:vincjo/svelte-simple-datatables
+  svelte-simple-datatables: github:vincjo/svelte-simple-datatables#7978564
   yaml: ^1.10.2
 
 dependencies:
@@ -20,15 +21,16 @@ dependencies:
   glob: 7.2.0
   glob-promise: 4.2.2_glob@7.2.0
   marked: 3.0.8
+  papaparse: 5.3.1
   yaml: 1.10.2
 
 devDependencies:
   '@sveltejs/adapter-static': 1.0.0-next.21
-  '@sveltejs/kit': 1.0.0-next.192_svelte@3.44.0
+  '@sveltejs/kit': 1.0.0-next.201_svelte@3.44.2
   eslint: 8.1.0
-  eslint-plugin-svelte3: 3.2.1_eslint@8.1.0+svelte@3.44.0
-  svelte: 3.44.0
-  svelte-simple-datatables: github.com/vincjo/svelte-simple-datatables/79785648f360d98932ea82051ef19243412d4d54
+  eslint-plugin-svelte3: 3.2.1_eslint@8.1.0+svelte@3.44.2
+  svelte: 3.44.2
+  svelte-simple-datatables: github.com/vincjo/svelte-simple-datatables/7978564
 
 packages:
 
@@ -116,17 +118,17 @@ packages:
     resolution: {integrity: sha512-B4+QoUVAaANKx+mHntG8SqF45zbj3Ct4Akg/cGauo6COyfKZRhO5OsMa+wPuT2TKJBZC4eEDK0p+p9nyQBkxKQ==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.192_svelte@3.44.0:
-    resolution: {integrity: sha512-8LyPeEwxzMFMMr05I27j77qgvBdw92eVCH+W8+nW8kA7dkfA1e38GZXEb3qshd0Jez2Cng8MAzVMoETzGaQcng==}
+  /@sveltejs/kit/1.0.0-next.201_svelte@3.44.2:
+    resolution: {integrity: sha512-WcYexOEPWgDWOk0oOteTU5QwWykdIcOFJig+akeHqwE/jVtPURLZFtTNx0ymUWXN4S+dUXf60KF6HEMv74FHpA==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
       svelte: ^3.44.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.30_svelte@3.44.0+vite@2.6.13
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.30_svelte@3.44.2+vite@2.6.13
       cheap-watch: 1.0.4
       sade: 1.7.4
-      svelte: 3.44.0
+      svelte: 3.44.2
       vite: 2.6.13
     transitivePeerDependencies:
       - diff-match-patch
@@ -136,7 +138,7 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.30_svelte@3.44.0+vite@2.6.13:
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.30_svelte@3.44.2+vite@2.6.13:
     resolution: {integrity: sha512-YQqdMxjL1VgSFk4/+IY3yLwuRRapPafPiZTiaGEq1psbJYSNYUWx9F1zMm32GMsnogg3zn99mGJOqe3ld3HZSg==}
     engines: {node: ^14.13.1 || >= 16}
     peerDependencies:
@@ -152,8 +154,8 @@ packages:
       kleur: 4.1.4
       magic-string: 0.25.7
       require-relative: 0.8.7
-      svelte: 3.44.0
-      svelte-hmr: 0.14.7_svelte@3.44.0
+      svelte: 3.44.2
+      svelte-hmr: 0.14.7_svelte@3.44.2
       vite: 2.6.13
     transitivePeerDependencies:
       - supports-color
@@ -497,7 +499,7 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-plugin-svelte3/3.2.1_eslint@8.1.0+svelte@3.44.0:
+  /eslint-plugin-svelte3/3.2.1_eslint@8.1.0+svelte@3.44.2:
     resolution: {integrity: sha512-YoBR9mLoKCjGghJ/gvpnFZKaMEu/VRcuxpSRS8KuozuEo7CdBH7bmBHa6FmMm0i4kJnOyx+PVsaptz96K6H/4Q==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -505,7 +507,7 @@ packages:
       svelte: ^3.2.0
     dependencies:
       eslint: 8.1.0
-      svelte: 3.44.0
+      svelte: 3.44.2
     dev: true
 
   /eslint-scope/6.0.0:
@@ -880,6 +882,10 @@ packages:
       word-wrap: 1.2.3
     dev: true
 
+  /papaparse/5.3.1:
+    resolution: {integrity: sha512-Dbt2yjLJrCwH2sRqKFFJaN5XgIASO9YOFeFP8rIBRG2Ain8mqk5r1M6DkfvqEVozVcz3r3HaUGw253hA1nLIcA==}
+    dev: false
+
   /parent-module/1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
@@ -1024,16 +1030,16 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /svelte-hmr/0.14.7_svelte@3.44.0:
+  /svelte-hmr/0.14.7_svelte@3.44.2:
     resolution: {integrity: sha512-pDrzgcWSoMaK6AJkBWkmgIsecW0GChxYZSZieIYfCP0v2oPyx2CYU/zm7TBIcjLVUPP714WxmViE9Thht4etog==}
     peerDependencies:
       svelte: '>=3.19.0'
     dependencies:
-      svelte: 3.44.0
+      svelte: 3.44.2
     dev: true
 
-  /svelte/3.44.0:
-    resolution: {integrity: sha512-zWACSJBSncGiDvFfYOMFGNV5zDLOlyhftmO5yOZ0lEtQMptpElaRtl39MWz1+lYCpwUq4F3Q2lTzI9TrTL+eMA==}
+  /svelte/3.44.2:
+    resolution: {integrity: sha512-jrZhZtmH3ZMweXg1Q15onb8QlWD+a5T5Oca4C1jYvSURp2oD35h4A5TV6t6MEa93K4LlX6BkafZPdQoFjw/ylA==}
     engines: {node: '>= 8'}
     dev: true
 
@@ -1112,8 +1118,8 @@ packages:
     engines: {node: '>= 6'}
     dev: false
 
-  github.com/vincjo/svelte-simple-datatables/79785648f360d98932ea82051ef19243412d4d54:
-    resolution: {tarball: https://codeload.github.com/vincjo/svelte-simple-datatables/tar.gz/79785648f360d98932ea82051ef19243412d4d54}
+  github.com/vincjo/svelte-simple-datatables/7978564:
+    resolution: {tarball: https://codeload.github.com/vincjo/svelte-simple-datatables/tar.gz/7978564}
     name: svelte-simple-datatables
     version: 0.1.26
     dev: true

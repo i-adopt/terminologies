@@ -1,17 +1,12 @@
 <script context="module">
+  import MarkDown from '../../components/MarkDown.svelte';
   import { base } from '$app/paths';
-  export async function load({ page }) {
+  export async function load() {
 
     // get data
-    let data = fetch( `${base}/data/summary.json`)
+    let data = fetch( `${base}/data/unit2property.json`)
       .then( (d) => d.json() )
-      .then( (d) => d.sort( (a,b) => a.title.localeCompare( b.title ) ) );
-
-    // possibly filter the data
-    if( [ 'variable', 'property', 'entity', 'constraint', 'method', 'unit' ].includes( page.params.slug )) {
-      const slug = page.params.slug;
-      data = data.then( (d) => d.filter((el) => el.has[slug] ) );
-    }
+      .then( (d) => d.sort( (a,b) => a.unitLabel.localeCompare( b.unitLabel ) ) );
 
     return {
       props: {
@@ -45,6 +40,12 @@
   }
 </script>
 
+<h1>Unit to Property Lookup</h1>
+
+<div class="text">
+  <MarkDown source="unit2prop" />
+</div>
+
 {#await dataPromise}
   <p>Loading...</p>
 {:then data}
@@ -54,20 +55,21 @@
   <div class="list">
     <Datatable settings={settings} data={data}>
       <thead>
-        <th data-key="title">Name</th>
-        <th data-key="(row) => row.domain.join()">Domain(s)</th>
-        <th data-key="type">Type</th>
-        <th>&nbsp;</th>
+        <th data-key="source">Ontology</th>
+        <th data-key="unitLabel">Unit</th>
+        <th data-key="quantLabel">Property</th>
       </thead>
       <tbody>
       {#each $rows as row}
-        <tr data-id="{row.id}">
-          <td on:click={handleClick}>{row.title}</td>
-          <td on:click={handleClick}>{(row.domain || []).map( (d) => d.label ).join('; ')}</td>
-          <td on:click={handleClick}>{row.type}</td>
-          <td class="download">
-            <a href="{BASE_PATH}/data/{row.id}.ttl" target="_blank"><img src="{BASE_PATH}/gfx/rdf.svg" alt="dcat"/></a>
-            <a href="{BASE_PATH}/data/{row.id}.json" target="_blank"><img src="{ASSET_PATH}/gfx/json.svg" alt="JSON"/></a>
+        <tr>
+          <td on:click={handleClick}>{row.source}</td>
+          <td on:click={handleClick}><a href="{row.unit}" target="_blank">{row.unitLabel}</a></td>
+          <td on:click={handleClick}>
+            <ul>
+            {#each row.quant as quant}
+              <li><a href="{quant.quant}" target="_blank">{quant.quantLabel}</a></li>
+            {/each}
+            </ul>
           </td>
         </tr>
       {/each}
@@ -84,7 +86,7 @@
   }
   .list {
     display:  inline-block;
-    height:   calc(100% - 10em);
+    height:   calc(100% - 12em);
   }
   td, th {
     padding: 0.25em;
@@ -100,11 +102,11 @@
   tr:hover {
     background-color: steelblue;
   }
-  img {
-    height: 1.5em;
-    width: 1.5em;
+  td ul {
+    margin: 0.2em;
   }
-  .download {
-    white-space: nowrap;
+  .text {
+    display: inline-block;
+    max-width: 800px;
   }
 </style>

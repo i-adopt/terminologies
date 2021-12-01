@@ -34,6 +34,7 @@ const config = {
       entries: [
         '*',
         '/data/summary.json',
+        '/data/unit2property.json',
         ... dataFiles,
         ... mdFiles,
       ],
