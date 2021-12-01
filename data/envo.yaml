@@ -7,7 +7,8 @@ domain:
     iri: http://data.europa.eu/8mn/euroscivoc/4a8788fc-4172-461c-ae94-40be4f39043f
 keywords: null
 type: ontology
-language: null
+language: 
+  - en
 has:
   variable: true
   property: false
