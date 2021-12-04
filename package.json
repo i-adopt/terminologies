@@ -8,21 +8,23 @@
     "lint": "eslint --ignore-path .gitignore ."
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
     "@sveltejs/adapter-static": "^1.0.0-next.21",
     "@sveltejs/kit": "^1.0.0-next.192",
     "eslint": "8.1.0",
     "eslint-plugin-svelte3": "^3.2.1",
-    "svelte": "^3.42.6",
-    "svelte-simple-datatables": "github:vincjo/svelte-simple-datatables#7978564"
+    "svelte": "^3.42.6"
   },
   "type": "module",
   "dependencies": {
-    "@rollup/plugin-commonjs": "^21.0.1",
-    "@rollup/plugin-node-resolve": "^13.0.6",
+    "datatables.net": "^1.11.3",
+    "datatables.net-dt": "^1.11.3",
     "glob": "^7.2.0",
-    "papaparse": "^5.3.1",
     "glob-promise": "^4.2.2",
+    "jquery": "^3.6.0",
     "marked": "^3.0.8",
+    "papaparse": "^5.3.1",
     "yaml": "^1.10.2"
   }
 }

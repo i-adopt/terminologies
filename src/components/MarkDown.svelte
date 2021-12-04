@@ -7,7 +7,7 @@
 
   onMount(async () => {
     if( source ) {
-      content = await (await fetch(`${base}/md/${source}.md`)).text()
+      content = await (await fetch(`${base}/md/${source}.md`)).text();
     }
   });
 

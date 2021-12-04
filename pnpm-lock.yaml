@@ -5,21 +5,26 @@ specifiers:
   '@rollup/plugin-node-resolve': ^13.0.6
   '@sveltejs/adapter-static': ^1.0.0-next.21
   '@sveltejs/kit': ^1.0.0-next.192
+  datatables.net: ^1.11.3
+  datatables.net-dt: ^1.11.3
   eslint: 8.1.0
   eslint-plugin-svelte3: ^3.2.1
   glob: ^7.2.0
   glob-promise: ^4.2.2
+  jquery: ^3.6.0
   marked: ^3.0.8
   papaparse: ^5.3.1
   svelte: ^3.42.6
-  svelte-simple-datatables: github:vincjo/svelte-simple-datatables#7978564
   yaml: ^1.10.2
 
 dependencies:
   '@rollup/plugin-commonjs': 21.0.1
   '@rollup/plugin-node-resolve': 13.0.6
+  datatables.net: 1.11.3
+  datatables.net-dt: 1.11.3
   glob: 7.2.0
   glob-promise: 4.2.2_glob@7.2.0
+  jquery: 3.6.0
   marked: 3.0.8
   papaparse: 5.3.1
   yaml: 1.10.2
@@ -30,7 +35,6 @@ devDependencies:
   eslint: 8.1.0
   eslint-plugin-svelte3: 3.2.1_eslint@8.1.0+svelte@3.44.2
   svelte: 3.44.2
-  svelte-simple-datatables: github.com/vincjo/svelte-simple-datatables/7978564
 
 packages:
 
@@ -298,6 +302,19 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /datatables.net-dt/1.11.3:
+    resolution: {integrity: sha512-EX/thRwXpQRj8hZSb+ZMDNQ4uW1zLZa9BoAhhw1b5HIDH1nJ9WRTkERsoxE+3WISeX8bDiaEydf8TTQBSqxXVw==}
+    dependencies:
+      datatables.net: 1.11.3
+      jquery: 3.6.0
+    dev: false
+
+  /datatables.net/1.11.3:
+    resolution: {integrity: sha512-VMj5qEaTebpNurySkM6jy6sGpl+s6onPK8xJhYr296R/vUBnz1+id16NVqNf9z5aR076OGcpGHCuiTuy4E05oQ==}
+    dependencies:
+      jquery: 3.6.0
+    dev: false
 
   /debug/4.3.2:
     resolution: {integrity: sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==}
@@ -783,6 +800,10 @@ packages:
     resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=}
     dev: true
 
+  /jquery/3.6.0:
+    resolution: {integrity: sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==}
+    dev: false
+
   /js-yaml/3.14.1:
     resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
     hasBin: true
@@ -1117,9 +1138,3 @@ packages:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
     dev: false
-
-  github.com/vincjo/svelte-simple-datatables/7978564:
-    resolution: {tarball: https://codeload.github.com/vincjo/svelte-simple-datatables/tar.gz/7978564}
-    name: svelte-simple-datatables
-    version: 0.1.26
-    dev: true

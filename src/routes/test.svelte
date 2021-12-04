@@ -1,5 +1,5 @@
 <script context="module">
-  import Datatable from '../../components/Datatable.svelte';
+  import Datatable from '../components/Datatable.svelte';
   import { base } from '$app/paths';
   export async function load({ page }) {
 
@@ -61,14 +61,13 @@
   function handleClick(){
     goto( `../data/${this.parentNode.dataset.id}` );
   }
-
 </script>
 
 {#await dataPromise}
   <p>Loading...</p>
 {:then data}
   <div class="list">
-    <Datatable options={options} data={data} rowLink={handleClick} />
+    <Datatable options={options} data={data} />
   </div>
 {:catch error}
   <p style="color: red">{error.message}</p>

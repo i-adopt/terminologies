@@ -1,5 +1,6 @@
 <script context="module">
   import MarkDown from '../../components/MarkDown.svelte';
+  import Datatable from '../../components/Datatable.svelte';
   import { base } from '$app/paths';
   export async function load() {
 
@@ -16,28 +17,26 @@
   }
 </script>
 <script>
-  import { goto } from '$app/navigation';
-  import { assets } from '$app/paths';
-  import { Datatable, SearchInput, rows } from 'svelte-simple-datatables';
-
   export let dataPromise;
-  export const BASE_PATH = base;
-  export const ASSET_PATH = assets;
 
-  const settings = {
-    sortable: true,
-    pagination: false,
-    columnFilter: false,
-    blocks: {
-      searchInput: false,
-      paginationButtons: false,
-      paginationRowCount: false,
-    }
+  const options = {
+    columns: [
+      {
+        data: 'source',
+        title: 'Ontology',
+      },
+      {
+        data:   'unitLabel',
+        title:  'Unit',
+        render: ( _, __, row ) => `<a href="${row.unit}" target="_blank">${row.unitLabel}</a>`,
+      },
+      {
+        data:   'quant',
+        title:  'Property',
+        render: ( q ) => `<ul>${ q.map( (el) => `<li><a href="${el.quant}" target="_blank">${el.quantLabel}</a></li>`).join( '' )}</ul>`,
+      },
+    ]
   };
-
-  function handleClick(){
-    goto( `../data/${this.parentNode.dataset.id}` );
-  }
 </script>
 
 <h1>Unit to Property Lookup</h1>
@@ -49,61 +48,18 @@
 {#await dataPromise}
   <p>Loading...</p>
 {:then data}
-  <div class="search">
-    <SearchInput/>
-  </div>
   <div class="list">
-    <Datatable settings={settings} data={data}>
-      <thead>
-        <th data-key="source">Ontology</th>
-        <th data-key="unitLabel">Unit</th>
-        <th data-key="quantLabel">Property</th>
-      </thead>
-      <tbody>
-      {#each $rows as row}
-        <tr>
-          <td on:click={handleClick}>{row.source}</td>
-          <td on:click={handleClick}><a href="{row.unit}" target="_blank">{row.unitLabel}</a></td>
-          <td on:click={handleClick}>
-            <ul>
-            {#each row.quant as quant}
-              <li><a href="{quant.quant}" target="_blank">{quant.quantLabel}</a></li>
-            {/each}
-            </ul>
-          </td>
-        </tr>
-      {/each}
-      </tbody>
-    </Datatable>
+    <Datatable options={options} data={data}/>
   </div>
 {:catch error}
   <p style="color: red">{error.message}</p>
 {/await}
 
 <style>
-  .search {
-    margin-bottom: 1em;
-  }
   .list {
     display:  inline-block;
     height:   calc(100% - 12em);
-  }
-  td, th {
-    padding: 0.25em;
-    text-align: left !important;
-    box-sizing: border-box;
-  }
-  tr:nth-child(odd) {
-    background-color: #eee;
-  }
-  tr {
-    cursor: pointer;
-  }
-  tr:hover {
-    background-color: steelblue;
-  }
-  td ul {
-    margin: 0.2em;
+    width: 100%;
   }
   .text {
     display: inline-block;
