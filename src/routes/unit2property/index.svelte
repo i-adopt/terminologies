@@ -20,6 +20,7 @@
   export let dataPromise;
 
   const options = {
+    order: [[1, 'asc']],
     columns: [
       {
         data: 'source',
@@ -33,7 +34,7 @@
       {
         data:   'quant',
         title:  'Property',
-        render: ( q ) => `<ul>${ q.map( (el) => `<li><a href="${el.quant}" target="_blank">${el.quantLabel}</a></li>`).join( '' )}</ul>`,
+        render: ( q ) => `<ul>${ q.sort( (a,b) => a.quantLabel.localeCompare( b.quantLabel ) ).map( (el) => `<li><a href="${el.quant}" target="_blank">${el.quantLabel}</a></li>`).join( '' )}</ul>`,
       },
     ]
   };
