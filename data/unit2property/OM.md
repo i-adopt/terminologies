@@ -10,15 +10,23 @@ File used in particular:
 
 ```sparql
 PREFIX om: <http://www.ontology-of-units-of-measure.org/resource/om-2/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-select * where { 
-	?unit   a                                 om:Unit ;
-          (rdfs:label|om:alternativeLabel)  ?unitLabel .
-  ?quant  om:commonlyHasUnit                ?unit ;
-          (rdfs:label|om:alternativeLabel)  ?quantLabel .
-  FILTER( LANG(?unitLabel) in ("en", "") )
-  FILTER( LANG(?quantLabel) in ("en", "") )
-}
+SELECT DISTINCT * WHERE {
 
+  # units + quantity kinds
+  ?unit   a          om:Unit ;
+          (rdfs:label|om:alternativeLabel) ?unitLabel .
+  ?quant  om:commonlyHasUnit ?unit ;
+          rdfs:label         ?quantLabel .
+
+  # languages
+  FILTER( LANG(?unitLabel) in ("en", "") )
+  FILTER( LANG(?quantLabel) = LANG(?unitLabel) )
+
+  # remove currencies and counts
+  FILTER NOT EXISTS {
+      VALUES ?excludedQuant { om:AmountOfMoney om:Number }
+      ?excludedQuant om:commonlyHasUnit ?unit .
+  }
+}
 ```
