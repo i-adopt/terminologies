@@ -1,0 +1,95 @@
+name: Propose Terminology
+description: Propose a new terminology to be added to the catalogue.
+title: "[Terminology]: "
+labels: ["terminology"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for adding another terminology to the catalogue. Please make sure there it is not yet part of the catalogue and there is no open issue for this terminology.
+  - type: input
+    id: title
+    attributes:
+      label: Title of the Terminology
+      description: How is the terminology called?
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL of the terminology
+      description: Where can we find the terminology?
+    validations:
+      required: false
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of Terminology
+      description: What is the type of the terminology?
+      multiple: true
+      options:
+        - Controlled Vocabulary
+        - SKOS Vocabulary
+        - Thesaurus
+        - Ontology
+  - type: textarea
+    id: domain
+    attributes:
+      label: Domain(s)
+      description: For which domains does the terminology provide concepts? If possible, please select matching domains from [EuroSciVoc](https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://data.europa.eu/8mn/euroscivoc/40c0f173-baa3-48a3-9fe6-d6e8fb366a00).
+      placeholder: One domain per line
+    validations:
+      required: false
+  - type: textarea
+    id: keywords
+    attributes:
+      label: Keyword(s)
+      description: Please describe the terminology with additional keywords.
+    validations:
+      required: false
+  - type: textarea
+    id: lang
+    attributes:
+      label: Language(s)
+      description: Which languages are covered within the terminology?
+    validations:
+      required: false
+  - type: dropdown
+    id: concepts
+    attributes:
+      label: Concepts covered
+      description: For which of the I-ADOPT-related classes or roles does the terminology provide concepts?
+      multiple: true
+      options:
+        - Variables
+        - Properties
+        - Entities
+        - Constraints
+        - Methods
+        - Units
+    validations:
+      required: false
+  - type: dropdown
+    id: formal
+    attributes:
+      label: Formalization
+      description: Is the terminology formalized, e.g., as an RDF-resource?
+      multiple: false
+      options:
+        - "Yes"
+        - "No"
+        - I don't know
+  - type: textarea
+    id: alignments
+    attributes:
+      label: Alignment(s)
+      description: Are you aware of any alignments to other terminologies?
+    validations:
+      required: false
+  - type: textarea
+    id: comments
+    attributes:
+      label: Comments
+      description: Is there anything else you would like us to know about the terminology?
+    validations:
+      required: false
