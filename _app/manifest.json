@@ -131,7 +131,7 @@
       "_singletons-4a680913.js"
     ],
     "css": [
-      "assets/pages/list/_slug_.svelte-53b6d376.css"
+      "assets/pages/test.svelte-7c782cf9.css"
     ]
   },
   "src/routes/test.svelte": {
@@ -145,7 +145,7 @@
       "_Datatable-1640b98c.js"
     ],
     "css": [
-      "assets/pages/list/_slug_.svelte-53b6d376.css"
+      "assets/pages/test.svelte-7c782cf9.css"
     ]
   },
   "_vendor-a6a35261.js": {
