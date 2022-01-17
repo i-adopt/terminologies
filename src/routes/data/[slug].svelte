@@ -1,9 +1,9 @@
 <script context="module">
   import { base } from '$app/paths';
-  export function load({ page }) {
+  export function load({ params }) {
     return {
       props: {
-        promise: fetch(`${base}/data/${page.params.slug}.json`).then( (d) => d.json() ),
+        promise: fetch(`${base}/data/${params.slug}.json`).then( (d) => d.json() ),
       }
     };
   }

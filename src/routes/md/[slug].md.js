@@ -1,6 +1,6 @@
 import { promises as Fs } from 'fs';
 import Path from 'path';
-import marked from 'marked';
+import { marked } from 'marked';
 
 /**
  * @type {import('@sveltejs/kit').RequestHandler}

@@ -25,7 +25,7 @@ const config = {
     target: '#svelte',
     adapter: adapter(),
     paths: {
-      base:   '/terminologies',
+      base: '/terminologies',
     },
     prerender: {
       crawl: true,
@@ -41,6 +41,7 @@ const config = {
     },
   },
   plugins: [ resolve(), commonjs(), ]
+
 };
 
 export default config;

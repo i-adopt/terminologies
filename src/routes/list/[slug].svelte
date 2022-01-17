@@ -1,7 +1,7 @@
 <script context="module">
   import Datatable from '../../components/Datatable.svelte';
   import { base } from '$app/paths';
-  export async function load({ page }) {
+  export async function load({ params }) {
 
     // get data
     let data = fetch( `${base}/data/summary.json`)
@@ -9,8 +9,8 @@
       .then( (d) => d.sort( (a,b) => a.title.localeCompare( b.title ) ) );
 
     // possibly filter the data
-    if( [ 'variable', 'property', 'entity', 'constraint', 'method', 'unit' ].includes( page.params.slug )) {
-      const slug = page.params.slug;
+    if( [ 'variable', 'property', 'entity', 'constraint', 'method', 'unit' ].includes( params.slug )) {
+      const slug = params.slug;
       data = data.then( (d) => d.filter((el) => el.has[slug] ) );
     }
 

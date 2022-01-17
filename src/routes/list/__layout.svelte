@@ -1,8 +1,8 @@
 <script context="module">
-  export function load({ page }) {
+  export function load({ params }) {
     return {
       props: {
-        CURRENT_PAGE: page.params.slug || 'all',
+        CURRENT_PAGE: params.slug || 'all',
       }
     };
   }
