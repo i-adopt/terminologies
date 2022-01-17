@@ -1,0 +1,9 @@
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+<http://ontology.irstea.fr/cropusage> a dcat:Resource ;
+  dcat:theme <http://data.europa.eu/8mn/euroscivoc/9b9abbee-82f5-4766-bd4d-feb73cf06573> ;
+  dcat:keyword "crops"@en ;
+  dcat:landingPage <http://ontology.irstea.fr/cropusage> ;
+  dct:title  "French Crop Usage Thesaurus"@en .

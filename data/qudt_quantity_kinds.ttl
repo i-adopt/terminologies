@@ -1,0 +1,11 @@
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+<http://www.qudt.org/doc/2020/07/DOC_VOCAB-QUANTITY-KINDS-ALL-v2.1.html> a dcat:Resource ;
+
+  dcat:keyword "quantity kinds"@en ;
+  dcat:keyword "units"@en ;
+  dcat:keyword "dimensions"@en ;
+  dcat:landingPage <http://www.qudt.org/doc/2020/07/DOC_VOCAB-QUANTITY-KINDS-ALL-v2.1.html> ;
+  dct:title  "Quantities, Units, Dimensions and dataTypes"@en .

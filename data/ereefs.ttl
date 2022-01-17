@@ -1,0 +1,11 @@
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+<http://registry.it.csiro.au/def/environment/property> a dcat:Resource ;
+  dcat:theme <http://data.europa.eu/8mn/euroscivoc/a90b6f46-eb48-46d0-81c2-37cf667fd4a> ;
+  dcat:keyword "groundwater"@en ;
+  dcat:keyword "surface water"@en ;
+  dcat:keyword "marine water quality"@en ;
+  dcat:landingPage <http://registry.it.csiro.au/def/environment/property> ;
+  dct:title  "eReefs environment/observable-properties"@en .

@@ -1,0 +1,13 @@
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+<https://vocab.ices.dk/?ref=37> a dcat:Resource ;
+  dcat:theme <http://data.europa.eu/8mn/euroscivoc/288627c1-4e51-42b3-b773-f68b39c3b0a9> ;
+  dcat:keyword "trawl survey"@en ;
+  dcat:keyword "oceanography"@en ;
+  dcat:keyword "fisheries"@en ;
+  dcat:keyword "acoustic"@en ;
+  dcat:keyword "environmental data"@en ;
+  dcat:landingPage <https://vocab.ices.dk/?ref=37> ;
+  dct:title  "ICES Parameters"@en .

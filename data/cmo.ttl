@@ -1,0 +1,10 @@
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+<http://www.obofoundry.org/ontology/cmo.html> a dcat:Resource ;
+
+  dcat:keyword "morphology"@en ;
+  dcat:keyword "physiology"@en ;
+  dcat:landingPage <http://www.obofoundry.org/ontology/cmo.html> ;
+  dct:title  "Clinical measurement ontology"@en .
