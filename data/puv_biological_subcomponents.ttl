@@ -1,9 +1,0 @@
-
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dct:  <http://purl.org/dc/terms/> .
-
-<http://vocab.nerc.ac.uk/collection/S12/current/> a dcat:Resource ;
-  dcat:theme <http://data.europa.eu/8mn/euroscivoc/288627c1-4e51-42b3-b773-f68b39c3b0a9> ;
-  dcat:keyword "anatomical components"@en ;
-  dcat:landingPage <http://vocab.nerc.ac.uk/collection/S12/current/> ;
-  dct:title  "BODC parameter semantic model biological entity subcomponent terms"@en .

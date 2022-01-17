@@ -1,1 +1,0 @@
-import{S as t,i as a,s as e}from"../../chunks/vendor-52d01184.js";import{b as n}from"../../chunks/paths-28a87002.js";function u(){return{status:302,redirect:`${n}/list/all`}}class i extends t{constructor(s){super();a(this,s,null,null,e,{})}}export{i as default,u as load};

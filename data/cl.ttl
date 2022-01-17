@@ -1,9 +1,0 @@
-
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dct:  <http://purl.org/dc/terms/> .
-
-<http://www.obofoundry.org/ontology/cl.html> a dcat:Resource ;
-  dcat:theme <http://data.europa.eu/8mn/euroscivoc/803cff73-504b-41ae-9873-1836c76c15d1> ;
-  dcat:keyword "cell types"@en ;
-  dcat:landingPage <http://www.obofoundry.org/ontology/cl.html> ;
-  dct:title  "Cell Ontology"@en .

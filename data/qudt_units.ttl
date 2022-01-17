@@ -1,9 +1,0 @@
-
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dct:  <http://purl.org/dc/terms/> .
-
-<http://www.qudt.org/doc/DOC_VOCAB-UNITS.html> a dcat:Resource ;
-
-  dcat:keyword "units"@en ;
-  dcat:landingPage <http://www.qudt.org/doc/DOC_VOCAB-UNITS.html> ;
-  dct:title  "Quantities, Units, Dimensions and dataTypes"@en .

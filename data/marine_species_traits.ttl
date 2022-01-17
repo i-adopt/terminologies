@@ -1,9 +1,0 @@
-
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dct:  <http://purl.org/dc/terms/> .
-
-<http://www.marinespecies.org/traits/wiki/> a dcat:Resource ;
-  dcat:theme <http://data.europa.eu/8mn/euroscivoc/288627c1-4e51-42b3-b773-f68b39c3b0a9> ;
-  dcat:keyword "traits"@en ;
-  dcat:landingPage <http://www.marinespecies.org/traits/wiki/> ;
-  dct:title  "Marine Species Traits"@en .
