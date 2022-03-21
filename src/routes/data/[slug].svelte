@@ -24,7 +24,6 @@
       <hr>
       <dl>
 
-
         {#if data.keywords && (data.keywords.length > 0)}
           <dt>URL(s)</dt>
           <dd>
@@ -64,14 +63,16 @@
           </dd>
         {/if}
 
-        <dt>Language(s)</dt>
-        <dd>
-          <div class="lang">
-            {#each data.language as lang}
-            <img src="https://unpkg.com/language-icons/icons/{lang}.svg" width="30" alt="{lang}" title="{lang}" />
-            {/each}
-          </div>
-        </dd>
+        {#if data.language && (data.language.length > 0)}
+          <dt>Language(s)</dt>
+          <dd>
+            <div class="lang">
+              {#each data.language as lang}
+              <img src="https://unpkg.com/language-icons/icons/{lang}.svg" width="30" alt="{lang}" title="{lang}" />
+              {/each}
+            </div>
+          </dd>
+        {/if}
 
         <dt>Concepts contained</dt>
         <dd>
