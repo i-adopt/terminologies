@@ -19,6 +19,18 @@
 <script>
   export let dataPromise;
 
+  const dataFormatter = ( data, _, colIndex ) => {
+    const cell = window.jQuery(data);
+    switch( colIndex ) {
+      case 1: // unit
+        return `${cell.text()} (${cell.attr('href')})`;
+      case 2: // properties
+        return cell.find( 'a' ).map( (_, el) => `${el.textContent} (${el.href})` ).get().join( '\n' );
+      default:
+        return data;
+    }
+  };
+
   const options = {
     order: [[1, 'asc']],
     columns: [
@@ -40,21 +52,20 @@
     dom: 'frtipB',
     buttons: [
       {
+        extend: 'excel',
+        text : 'Export to Excel',
+        exportOptions : {
+          format: {
+            body: dataFormatter
+          }
+        },
+      },
+      {
         extend: 'csv',
         text : 'Export to CSV',
         exportOptions : {
           format: {
-            body: ( data, _, colIndex ) => {
-              const cell = window.jQuery(data);
-              switch( colIndex ) {
-                case 1: // unit
-                  return `${cell.text()} (${cell.attr('href')})`;
-                case 2: // properties
-                  return cell.find( 'a' ).map( (_, el) => `${el.textContent} (${el.href})` ).get().join( '\n' );
-                default:
-                  return data;
-              }
-            }
+            body: dataFormatter
           }
         },
       }
