@@ -36,7 +36,29 @@
         title:  'Property',
         render: ( q ) => `<ul>${ q.sort( (a,b) => a.quantLabel.localeCompare( b.quantLabel ) ).map( (el) => `<li><a href="${el.quant}" target="_blank">${el.quantLabel}</a></li>`).join( '' )}</ul>`,
       },
-    ]
+    ],
+    dom: 'frtipB',
+    buttons: [
+      {
+        extend: 'csv',
+        text : 'Export to CSV',
+        exportOptions : {
+          format: {
+            body: ( data, _, colIndex ) => {
+              const cell = window.jQuery(data);
+              switch( colIndex ) {
+                case 1: // unit
+                  return `${cell.text()} (${cell.attr('href')})`;
+                case 2: // properties
+                  return cell.find( 'a' ).map( (_, el) => `${el.textContent} (${el.href})` ).get().join( '\n' );
+                default:
+                  return data;
+              }
+            }
+          }
+        },
+      }
+    ],
   };
 </script>
 
@@ -59,11 +81,15 @@
 <style>
   .list {
     display:  inline-block;
-    height:   calc(100% - 12em);
+    height:   calc(100% - 13em);
     width: 100%;
   }
   .text {
     display: inline-block;
     max-width: 800px;
+  }
+  :global(.dt-buttons) {
+    padding-top:  0.755em;
+    text-align:   right;
   }
 </style>
