@@ -24,7 +24,7 @@
       <hr>
       <dl>
 
-        {#if data.keywords && (data.keywords.length > 0)}
+        {#if data.url && (data.url.length > 0)}
           <dt>URL(s)</dt>
           <dd>
             <ul>
