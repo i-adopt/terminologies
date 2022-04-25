@@ -30,8 +30,8 @@
 
   const clickHandler = !rowLink
     ? undefined
-    : function clickHandler(ev){
-      rowLink.apply( ev.target, ev );
+    : function clickHandler( ... args ){
+      rowLink.apply( args[0].target, args );
     };
 
 </script>

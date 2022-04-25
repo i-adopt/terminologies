@@ -58,8 +58,11 @@
 
   };
 
-  function handleClick(){
-    goto( `../data/${this.parentNode.dataset.id}` );
+  function handleClick(e){
+    // images are the links to different representations
+    if( e.target.tagName !== 'IMG' ) {
+      goto( `${base}/data/${this.parentNode.dataset.id}` );
+    }
   }
 
 </script>
