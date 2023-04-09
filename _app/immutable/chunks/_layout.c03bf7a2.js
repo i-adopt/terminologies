@@ -1,0 +1,1 @@
+function t({params:l}){return{CURRENT_PAGE:l.slug||"all"}}const a="always",e=Object.freeze(Object.defineProperty({__proto__:null,load:t,trailingSlash:a},Symbol.toStringTag,{value:"Module"}));export{e as _,t as l,a as t};
