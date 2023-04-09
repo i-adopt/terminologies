@@ -22,9 +22,11 @@
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
     <script type="text/javascript" charset="utf8" src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    %svelte.head%
+    %sveltekit.head%
   </head>
   <body>
-    <div id="svelte">%svelte.body%</div>
+    <main>
+      <div style="display: contents">%sveltekit.body%</div>
+    </main>
   </body>
 </html>

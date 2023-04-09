@@ -1,11 +1,10 @@
 import { promises as Fs } from 'fs';
 import Path from 'path';
 import * as Yaml from 'yaml';
+import { error, json } from '@sveltejs/kit';
 
-/**
- * @type {import('@sveltejs/kit').RequestHandler}
- */
-export async function get({ params }) {
+/** @type {import('./$types').RequestHandler} */
+export async function GET({ params }) {
 
   let data;
   try {
@@ -16,20 +15,14 @@ export async function get({ params }) {
     const raw = await Fs.readFile( filePath, 'utf-8' );
     data = Yaml.default.parse( raw );
 
-    return {
-      body: data,
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    };
+    return json(data);
 
   } catch(e) {
 
-    return {
-      status: 404,
-      body: 'Terminology not found!' + e.message
-    };
+    throw error( 404, 'Terminology not found!' );
 
   }
 
 }
+
+export const prerender = true;

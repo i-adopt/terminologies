@@ -1,23 +1,7 @@
-<script context="module">
-  import MarkDown from '../../components/MarkDown.svelte';
-  import Datatable from '../../components/Datatable.svelte';
-  import { base } from '$app/paths';
-  export async function load() {
-
-    // get data
-    let data = fetch( `${base}/data/unit2property.json`)
-      .then( (d) => d.json() )
-      .then( (d) => d.sort( (a,b) => a.unitLabel.localeCompare( b.unitLabel ) ) );
-
-    return {
-      props: {
-        dataPromise: data,
-      }
-    };
-  }
-</script>
 <script>
-  export let dataPromise;
+  import MarkDown from '$lib/MarkDown.svelte';
+  import Datatable from '$lib/Datatable.svelte';
+  export let data;
 
   const dataFormatter = ( data, _, colIndex ) => {
     const cell = window.jQuery(data);
@@ -79,7 +63,7 @@
   <MarkDown source="unit2prop" />
 </div>
 
-{#await dataPromise}
+{#await data.promise}
   <p>Loading...</p>
 {:then data}
   <div class="list">

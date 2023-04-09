@@ -1,5 +1,5 @@
 <script context="module">
-  import MarkDown from '../components/MarkDown.svelte';
+  import MarkDown from '$lib/MarkDown.svelte';
 </script>
 <script>
   import { base } from '$app/paths';
@@ -10,7 +10,7 @@
   <MarkDown source="home" />
 </div>
 
-<svg xmlns="http://www.w3.org/2000/svg" 
+<svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="601px"
   height="151px" viewBox="-0.5 -0.5 601 151">
   <defs />

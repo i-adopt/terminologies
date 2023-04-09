@@ -1,10 +1,13 @@
 import adapter from '@sveltejs/adapter-static';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
-import * as Glob from 'glob-promise';
+import { glob as Glob } from 'glob';
+
+// are we in dev mode?
+const dev = process.argv.includes('dev');
 
 // list of all files to be generated for the data
-const files = Glob.default.sync( '*.yaml', { cwd: 'data'} );
+const files = Glob.sync( '*.yaml', { cwd: 'data'} );
 const dataFiles = files.flatMap( (f) => {
   f = f.replace( /.yaml$/, '' );
   return [
@@ -13,7 +16,7 @@ const dataFiles = files.flatMap( (f) => {
     `/data/${f}.json`,
   ];
 });
-const mdFiles = Glob.default
+const mdFiles = Glob
   .sync( '*.md', { cwd: 'texts'} )
   .map( (f) => `/md/${f}` );
 
@@ -21,16 +24,16 @@ const mdFiles = Glob.default
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    // hydrate the <div id="svelte"> element in src/app.html
-    target: '#svelte',
-    adapter: adapter(),
+    adapter: adapter({
+      strict: false,
+    }),
     paths: {
-      base: '/terminologies',
+      base: dev ? '' : '/terminologies',
+      relative: false,
     },
     prerender: {
-      crawl: true,
-      enabled: true,
-      onError: 'continue',
+      // crawl: true,
+      handleHttpError: 'ignore',
       entries: [
         '*',
         '/data/summary.json',

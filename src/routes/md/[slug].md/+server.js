@@ -1,11 +1,10 @@
 import { promises as Fs } from 'fs';
 import Path from 'path';
 import { marked } from 'marked';
+import { error } from '@sveltejs/kit';
 
-/**
- * @type {import('@sveltejs/kit').RequestHandler}
- */
-export async function get({ params }) {
+/** @type {import('./$types').RequestHandler} */
+export async function GET({ params }) {
 
   let data;
   try {
@@ -16,11 +15,11 @@ export async function get({ params }) {
     data = await Fs.readFile( filePath, 'utf-8' );
 
   } catch(e) {
-    data = '';
+    throw error( 500, '' );
   }
 
-  return {
-    body: marked( data ),
-  };
+  return new Response(marked( data ));
 
 }
+
+export const prerender = true;

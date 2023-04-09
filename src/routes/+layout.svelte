@@ -61,7 +61,7 @@
     margin:   0;
     padding:  0;
   }
-  :global(#svelte) {
+  :global(main) {
     align-items:  center;
     display:      flex;
     flex-flow:    column;

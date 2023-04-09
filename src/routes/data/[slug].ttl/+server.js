@@ -1,11 +1,10 @@
 import { promises as Fs } from 'fs';
 import Path from 'path';
 import * as Yaml from 'yaml';
+import { error, json } from '@sveltejs/kit';
 
-/**
- * @type {import('@sveltejs/kit').RequestHandler}
- */
-export async function get({ params }) {
+/** @type {import('./$types').RequestHandler} */
+export async function GET({ params }) {
 
   let data;
   try {
@@ -28,20 +27,18 @@ ${(data.url ?? []).map( (url) => `  dcat:landingPage <${url}> ;` ).join( '\n' )}
   dct:title  "${data.title}"@en .
 `;
 
-    return {
-      body: data,
+    return new Response(data, {
       headers: {
-        // 'Content-Type': 'application/x-turtle',
+        'Content-Type': 'application/x-turtle',
       }
-    };
+    });
 
   } catch(e) {
 
-    return {
-      status: 404,
-      body: 'Terminology not found!'
-    };
+    throw error( 404, 'Terminology not found!' );
 
   }
 
 }
+
+export const prerender = true;

@@ -1,30 +1,9 @@
-<script context="module">
-  import Datatable from '../../components/Datatable.svelte';
-  import { base } from '$app/paths';
-  export async function load({ params }) {
-
-    // get data
-    let data = fetch( `${base}/data/summary.json`)
-      .then( (d) => d.json() )
-      .then( (d) => d.sort( (a,b) => a.title.localeCompare( b.title ) ) );
-
-    // possibly filter the data
-    if( [ 'variable', 'property', 'entity', 'constraint', 'method', 'unit' ].includes( params.slug )) {
-      const slug = params.slug;
-      data = data.then( (d) => d.filter((el) => el.has[slug] ) );
-    }
-
-    return {
-      props: {
-        dataPromise: data,
-      }
-    };
-  }
-</script>
 <script>
+  import Datatable from '$lib/Datatable.svelte';
+  import { base } from '$app/paths';
   import { goto } from '$app/navigation';
 
-  export let dataPromise;
+  export let data;
 
   const options = {
     columns: [
@@ -66,8 +45,7 @@
   }
 
 </script>
-
-{#await dataPromise}
+{#await data.promise}
   <p>Loading...</p>
 {:then data}
   <div class="list">

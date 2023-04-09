@@ -1,5 +1,5 @@
 <script context="module">
-  import MarkDown from '../../components/MarkDown.svelte';
+  import MarkDown from '$lib/MarkDown.svelte';
 </script>
 
 <MarkDown source="join" />

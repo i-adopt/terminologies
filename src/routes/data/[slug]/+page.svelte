@@ -1,23 +1,14 @@
-<script context="module">
-  import { base } from '$app/paths';
-  export function load({ params }) {
-    return {
-      props: {
-        promise: fetch(`${base}/data/${params.slug}.json`).then( (d) => d.json() ),
-      }
-    };
-  }
-</script>
 <script>
-  import Status from '../../components/Status.svelte';
+  import Status from '$lib/Status.svelte';
+  import { base } from '$app/paths';
 
-  export let promise;
+  export let data;
   export const BASE_PATH = base;
 </script>
 
 <div class="container">
   <div>
-    {#await promise}
+    {#await data.promise}
       <p>Loading...</p>
     {:then data}
       <h1>{data.title} {#if data.verified}<span class="verified" title="I-Adopt verified">&check;</span>{/if}</h1>
