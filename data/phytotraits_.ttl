@@ -2,10 +2,10 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
 
-<http://thesauri.lifewatchitaly.eu/PhytoTraits/index.php> a dcat:Resource ;
-  dcat:theme <http://data.europa.eu/8mn/euroscivoc/288627c1-4e51-42b3-b773-f68b39c3b0a9> ;
+<https://kos.lifewatch.eu/thesauri/phytotraits/> a dcat:Resource ;
+  dcat:theme <http://eurovoc.europa.eu/5463> ;
+  dcat:theme <http://data.europa.eu/8mn/euroscivoc/d93d7f19-7965-430b-8d9e-80c0e4d57a9d> ;
   dcat:keyword "biological traits"@en ;
   dcat:keyword "phenotypes"@en ;
-  dcat:landingPage <http://thesauri.lifewatchitaly.eu/PhytoTraits/index.php> ;
-  dcat:landingPage <http://ecoportal.lifewatchitaly.eu/ontologies/PHYTOTRAITS> ;
+  dcat:landingPage <https://kos.lifewatch.eu/thesauri/phytotraits/> ;
   dct:title  "Phytoplankton Traits Thesaurus"@en .
