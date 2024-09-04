@@ -1,7 +1,7 @@
 title: Macroalgae Traits Thesaurus
 verified: true
 url:
-  - https://kos.lifewatch.eu/thesauri/macroalgaetraits/
+  - https://ecoportal.lifewatch.eu/ontologies/MACROALGAETRAITS
 domain:
   - label: biodiversity
     iri: http://eurovoc.europa.eu/5463
