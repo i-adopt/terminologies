@@ -1,7 +1,7 @@
 title: anaeethes
 verified: true
 url:
-  - https://vocabulaires-ouverts.inrae.fr/2017/03/13/thesaurus-anaee/
+  - http://opendata.inra.fr/anaeeThes/
   - http://agroportal.lirmm.fr/ontologies/ANAEETHES
 domain:
   - label: agricultural sciences
