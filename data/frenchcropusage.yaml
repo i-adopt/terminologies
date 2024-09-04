@@ -1,7 +1,7 @@
 title: French Crop Usage Thesaurus
 verified: false
 url:
-  - http://ontology.irstea.fr/cropusage
+  - https://opendata.inrae.fr/fcu-def/
 domain:
   - label: agricultural sciences
     iri: http://data.europa.eu/8mn/euroscivoc/9b9abbee-82f5-4766-bd4d-feb73cf06573
