@@ -1,7 +1,7 @@
 title: Phytoplankton Traits Thesaurus
 verified: true
 url:
-  - https://kos.lifewatch.eu/thesauri/phytotraits/
+  - https://ecoportal.lifewatch.eu/ontologies/PHYTOTRAITS
 domain:
   - label: biodiversity
     iri: http://eurovoc.europa.eu/5463
