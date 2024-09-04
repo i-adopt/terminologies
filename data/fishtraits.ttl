@@ -2,11 +2,11 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
 
-<https://kos.lifewatch.eu/thesauri/fishtraits/> a dcat:Resource ;
+<https://ecoportal.lifewatch.eu/ontologies/FISHTRAITS> a dcat:Resource ;
   dcat:theme <http://data.europa.eu/bkc/016.01.01.0200> ;
   dcat:theme <http://eurovoc.europa.eu/5463> ;
   dcat:theme <http://data.europa.eu/8mn/euroscivoc/d93d7f19-7965-430b-8d9e-80c0e4d57a9d> ;
   dcat:keyword "biological traits"@en ;
   dcat:keyword "phenotypes"@en ;
-  dcat:landingPage <https://kos.lifewatch.eu/thesauri/fishtraits/> ;
+  dcat:landingPage <https://ecoportal.lifewatch.eu/ontologies/FISHTRAITS> ;
   dct:title  "Fish Traits Thesaurus"@en .
