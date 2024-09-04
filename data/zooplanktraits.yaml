@@ -1,7 +1,7 @@
 title: Zooplankton Traits Thesaurus
 verified: true
 url:
-  - https://kos.lifewatch.eu/thesauri/zooplanktontraits/
+  - https://ecoportal.lifewatch.eu/ontologies/ZOOPLANKTRAITS
 domain:
   - label: Animal ecology
     iri: http://data.europa.eu/bkc/016.01.01.0200
