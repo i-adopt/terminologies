@@ -2,10 +2,10 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
 
-<https://kos.lifewatch.eu/thesauri/macroalgaetraits/> a dcat:Resource ;
+<https://ecoportal.lifewatch.eu/ontologies/MACROALGAETRAITS> a dcat:Resource ;
   dcat:theme <http://eurovoc.europa.eu/5463> ;
   dcat:theme <http://data.europa.eu/8mn/euroscivoc/d93d7f19-7965-430b-8d9e-80c0e4d57a9d> ;
   dcat:keyword "biological traits"@en ;
   dcat:keyword "phenotypes"@en ;
-  dcat:landingPage <https://kos.lifewatch.eu/thesauri/macroalgaetraits/> ;
+  dcat:landingPage <https://ecoportal.lifewatch.eu/ontologies/MACROALGAETRAITS> ;
   dct:title  "Macroalgae Traits Thesaurus"@en .
