@@ -1,0 +1,21 @@
+title: SI Quantities
+verified: true
+url:
+  - https://si-digital-framework.org/quantities
+domain:
+  - label: all
+    iri: null
+keywords:
+  - quantities
+type: null
+language: 
+  - en
+has:
+  variable: false
+  property: true
+  entity: false
+  constraint: false
+  method: false
+  unit: false
+formal: false
+alignments: null
