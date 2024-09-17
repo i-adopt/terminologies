@@ -1,0 +1,21 @@
+title: SI Units
+verified: true
+url:
+  - https://si-digital-framework.org/SI/units
+domain:
+  - label: all
+    iri: null
+keywords:
+  - units
+type: null
+language: 
+  - en
+has:
+  variable: false
+  property: false
+  entity: false
+  constraint: false
+  method: false
+  unit: true
+formal: false
+alignments: null
