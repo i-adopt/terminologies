@@ -1,0 +1,9 @@
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+<https://si-digital-framework.org/quantities> a dcat:Resource ;
+
+  dcat:keyword "quantities"@en ;
+  dcat:landingPage <https://si-digital-framework.org/quantities> ;
+  dct:title  "SI Quantities"@en .
