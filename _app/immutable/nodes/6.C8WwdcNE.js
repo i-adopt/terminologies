@@ -1,0 +1,1 @@
+import{n as e}from"../chunks/mY0RCdAF.js";import{R as t,_ as n,j as r,l as i,v as a,z as o}from"../chunks/Dx4DKG9H.js";var s=e({load:()=>c}),c=async({fetch:e})=>({content:await(await e(`md/join.md`)).text()});function l(e,s){o(s,!0);var c=a();i(r(c),()=>s.data.content),n(e,c),t()}export{l as component,s as universal};

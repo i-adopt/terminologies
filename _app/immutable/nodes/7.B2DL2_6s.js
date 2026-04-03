@@ -1,0 +1,1 @@
+import{R as e,i as t,n,z as r}from"../chunks/Dx4DKG9H.js";import{t as i}from"../chunks/Cs7lRxKP.js";import{n as a}from"../chunks/DxSaTDho.js";import"../chunks/DR0m7KtD.js";import"../chunks/TfkEeZoo.js";function o(o,s){r(s,!1);function c(){i(`${a}/list/all`)}var l={load:c};return n(),t(s,`load`,c),e(l)}export{o as component};
