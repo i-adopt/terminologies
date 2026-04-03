@@ -1,6 +1,5 @@
-import { promises as Fs } from 'fs';
-import Path from 'path';
-import { glob as Glob } from 'glob';
+import { promises as Fs } from 'node:fs';
+import Path from 'node:path';
 import { error, json } from '@sveltejs/kit';
 import Parse from 'papaparse';
 
@@ -10,7 +9,7 @@ export async function GET() {
   try {
 
     // scan for terminology descriptions
-    const files = await Glob( '*.csv', { cwd: Path.join('data', 'unit2property' ) } );
+    const files = await Array.fromAsync( Fs.glob( '*.csv', { cwd: Path.join('data', 'unit2property' ) } ) );
 
     // parse all files and summarize data
     const result = [];

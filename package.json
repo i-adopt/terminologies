@@ -1,33 +1,36 @@
 {
   "name": "iadopt-terminologies.github.io",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
     "lint": "eslint --ignore-path .gitignore .",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
+    "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^24.0.1",
-    "@rollup/plugin-node-resolve": "^15.0.2",
-    "@sveltejs/adapter-static": "2.0.1",
-    "@sveltejs/kit": "1.15.2",
-    "eslint": "8.38.0",
+    "@eslint/compat": "^2.0.3",
+    "@eslint/js": "^10.0.1",
+    "@rollup/plugin-commonjs": "^29.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@sveltejs/adapter-static": "3.0.10",
+    "@sveltejs/kit": "2.55.0",
+    "eslint": "10.1.0",
+    "eslint-plugin-svelte": "^3.16.0",
     "eslint-plugin-svelte3": "^4.0.0",
-    "svelte": "^3.58.0",
-		"svelte-check": "^3.0.1",
-    "vite": "^4.2.1"
+    "globals": "^17.4.0",
+    "svelte": "^5.55.0",
+    "svelte-check": "^4.4.5",
+    "vite": "^8.0.3"
   },
   "type": "module",
   "dependencies": {
-    "datatables.net": "^1.13.4",
-    "datatables.net-dt": "^1.13.4",
-    "glob": "^9.3.4",
-    "jquery": "^3.6.4",
-    "marked": "^4.3.0",
-    "papaparse": "^5.4.1",
-    "yaml": "^2.2.1"
+    "datatables.net": "^2.3.7",
+    "datatables.net-dt": "^2.3.7",
+    "jquery": "^4.0.0",
+    "marked": "^17.0.5",
+    "papaparse": "^5.5.3",
+    "yaml": "^2.8.3"
   }
 }

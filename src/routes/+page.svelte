@@ -1,13 +1,12 @@
-<script context="module">
-  import MarkDown from '$lib/MarkDown.svelte';
-</script>
 <script>
   import { base } from '$app/paths';
-  export let BASE_PATH = base;
+  let BASE_PATH = base;
+
+	let { data } = $props();
 </script>
 
 <div class="text">
-  <MarkDown source="home" />
+  {@html data.content}
 </div>
 
 <svg xmlns="http://www.w3.org/2000/svg"

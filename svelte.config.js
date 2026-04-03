@@ -1,13 +1,13 @@
 import adapter from '@sveltejs/adapter-static';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
-import { glob as Glob } from 'glob';
+import Fs from 'node:fs';
 
 // are we in dev mode?
 const dev = process.argv.includes('dev');
 
 // list of all files to be generated for the data
-const files = Glob.sync( '*.yaml', { cwd: 'data'} );
+const files = Fs.globSync( '*.yaml', { cwd: 'data'} );
 const dataFiles = files.flatMap( (f) => {
   f = f.replace( /.yaml$/, '' );
   return [
@@ -16,8 +16,7 @@ const dataFiles = files.flatMap( (f) => {
     `/data/${f}.json`,
   ];
 });
-const mdFiles = Glob
-  .sync( '*.md', { cwd: 'texts'} )
+const mdFiles = Fs.globSync( '*.md', { cwd: 'texts'} )
   .map( (f) => `/md/${f}` );
 
 

@@ -1,5 +1,5 @@
-<script context="module">
-  import MarkDown from '$lib/MarkDown.svelte';
+<script>
+	let { data } = $props();
 </script>
 
-<MarkDown source="join" />
+{@html data.content}

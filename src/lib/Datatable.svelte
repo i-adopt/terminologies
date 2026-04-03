@@ -1,13 +1,13 @@
 <script>
-  import { onMount } from 'svelte';
 
-  export let options;
-  export let data;
-  export let rowLink;
+  let {
+    options, data, rowLink
+  } = $props();
 
-  $: tableClass = rowLink ? 'linked' : '';
+  let tableClass = $derived( rowLink ? 'linked' : '' );
 
-  onMount( async () => {
+  // setup table
+  $effect( () => {
 
     window.jQuery( 'table' ).empty();
     window.jQuery( 'table' ).DataTable({
@@ -26,17 +26,22 @@
 
 
     });
+
   });
 
-  const clickHandler = !rowLink
-    ? undefined
-    : function clickHandler( ... args ){
-      rowLink.apply( args[0].target, args );
-    };
-
+  // navigate to details view
+  let clickHandler = $derived(
+    !rowLink
+      ? undefined
+      : function clickHandler( ... args ){
+        rowLink.apply( args[0].target, args );
+      }
+  );
 </script>
 
-<table class="{tableClass}" on:click={clickHandler}>
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+<table class="{tableClass}" onclick={clickHandler}>
   <thead><tr><th></th></tr></thead>
   <tbody><tr><td><ul></ul></td></tr></tbody>
 </table>

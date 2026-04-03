@@ -1,6 +1,5 @@
-import { promises as Fs } from 'fs';
-import Path from 'path';
-import { glob as Glob } from 'glob';
+import { promises as Fs } from 'node:fs';
+import Path from 'node:path';
 import * as Yaml from 'yaml';
 import { error, json } from '@sveltejs/kit';
 
@@ -10,7 +9,7 @@ export async function GET() {
   try {
 
     // scan for terminology descriptions
-    const files = await Glob( '*.yaml', { cwd: 'data' } );
+    const files = await Array.fromAsync( Fs.glob( '*.yaml', { cwd: 'data' } ) );
 
     // parse all files and extract summary data
     const result = [];

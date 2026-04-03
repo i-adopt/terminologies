@@ -1,0 +1,6 @@
+onlyBuiltDependencies:
+  - '@sveltejs/kit'
+  - esbuild
+  - svelte-preprocess
+# only install dependencies 1 week after release
+minimumReleaseAge: 10080

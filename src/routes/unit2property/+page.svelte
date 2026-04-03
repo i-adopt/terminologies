@@ -1,7 +1,7 @@
 <script>
-  import MarkDown from '$lib/MarkDown.svelte';
   import Datatable from '$lib/Datatable.svelte';
-  export let data;
+
+	let { data } = $props();
 
   const dataFormatter = ( data, _, colIndex ) => {
     const cell = window.jQuery(data);
@@ -60,7 +60,7 @@
 <h1>Unit to Property Lookup</h1>
 
 <div class="text">
-  <MarkDown source="unit2prop" />
+  {@html data.content}
 </div>
 
 {#await data.promise}
